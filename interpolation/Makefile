@@ -1,8 +1,14 @@
+GRAPH = /usr/bin/graph
+
 .PHONY: default
 default: A
 
-A: outA1.txt
-	cat outA1.txt
+A: outA1.svg
+
+outA1.svg: outA1.txt Makefile
+	$(GRAPH) --top-label 'lspline' \
+	--output-format svg --x-label 'x' --y-label 'y' \
+	< $<  > $@
 
 outA1.txt: mainA1
 	./mainA1 > outA1.txt
@@ -18,4 +24,4 @@ lspline.o: lspline.cpp
 
 .PHONY: clean
 clean:
-	rm -f *.o out* mainA1
+	rm -f *.o out* *.svg mainA1
