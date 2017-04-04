@@ -17,7 +17,7 @@ for (int i = 0; i < nx; i++) {
 	//x[i] = i + 0.5 * sin(i);
 	//y[i] = i + cos(i * i);
 	x[i] = i / M_PI;
-	y[i] = cos(x[i]);
+	y[i] = sin(x[i]);
 }
 
 // Output sampled values
