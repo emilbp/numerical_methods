@@ -1,25 +1,25 @@
 .PHONEY: default
 default: A C
 
-C:check
+C: check
 
-A:out.txt
+A: out.txt
 	cat out.txt
 
 out.txt: main
 	./main > out.txt
 
 main: main.o
-	g++ -o main main.o
+	g++ main.o -o main
 
 main.o: main.cpp
 	g++ -c main.cpp -o main.o
 
-.PHONEY:clean
+.PHONEY: clean
 clean:
-	rm -f main.o main out.txt correct.txt
+	rm -f *.o main out* correct.txt
 
-.PHONEY:check
+.PHONEY: check
 check: out.txt correct.txt
 	diff --brief out.txt correct.txt
 	echo "Test passed"
