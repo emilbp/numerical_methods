@@ -5,7 +5,7 @@
 #include <cmath>
 using namespace std;
 
-function<double(double)> lspline(vector<double>&x, vector<double>&y);
+function<double(double,int)> lspline(vector<double>&x, vector<double>&y);
 
 int main() {
 
@@ -36,15 +36,19 @@ cout << "# m=2, S=0\n";
 for(size_t i=0;i<x_real.size();i++) cout << x_real[i] << " " << y_real[i] << endl;
 
 // Make the linear spline
-function<double(double)> ls = lspline(x, y);
+function<double(double,int)> ls = lspline(x, y);
 
-int N = 200; double step = (x.back() - x.front()) / (N - 1);
+int N = 100; double step = (x.back() - x.front()) / (N - 1);
 
 cout << "# m=1, S=0\n";
 for(double z = x.front(); z < x.back(); z += step) {
-	cout << z << " " << ls(z) << endl;
+	cout << z << " " << ls(z,0) << endl;
+}
+
+cout << "# m=2, S=0\n";
+for(double z = x.front(); z < 4; z+=step) {
+	cout << z << " " << ls(z,1) + 2 << endl;
 }
 
 return 0;
 }
-
