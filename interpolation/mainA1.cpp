@@ -10,19 +10,30 @@ function<double(double)> lspline(vector<double>&x, vector<double>&y);
 int main() {
 
 int nx = 10;
-vector<double> x(nx), y(nx);
+int kx = 1000;
+double k;
+vector<double> x(nx), y(nx), x_real(kx), y_real(kx);
 
 // Generate sampled values
 for (int i = 0; i < nx; i++) {
-	//x[i] = i + 0.5 * sin(i);
-	//y[i] = i + cos(i * i);
-	x[i] = i / M_PI;
-	y[i] = sin(x[i]);
+	x[i] = i;
+	y[i] = i * pow(cos(i), 2);
+}
+
+// Generate 'real' values
+for (int i = 0; i < kx; i++) {
+	k = ((double)i * (double)nx) / (double)kx;
+	x_real[i] = k;
+	y_real[i] = k * pow(cos(k), 2);
 }
 
 // Output sampled values
 cout << "# m=0, S=4\n";
 for(size_t i=0;i<x.size();i++) cout << x[i] << " " << y[i] << endl;
+
+// Output 'real' values
+cout << "# m=2, S=0\n";
+for(size_t i=0;i<x_real.size();i++) cout << x_real[i] << " " << y_real[i] << endl;
 
 auto ls = lspline(x, y);
 
@@ -32,6 +43,8 @@ cout << "# m=1, S=0\n";
 for(double z = x.front(); z < x.back(); z += step) {
 	cout << z << " " << ls(z) << endl;
 }
+
+
 
 return 0;
 }

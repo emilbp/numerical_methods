@@ -17,9 +17,8 @@ return [x,y](double z) {
 		else {
 			j = m;
 		}
-
+	};
 	double p = (y[i+1] - y[i]) / (x[i+1] - x[i]);
 	return y[i] + p*(z - x[i]);
-	};
 };
 }
