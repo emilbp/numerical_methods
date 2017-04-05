@@ -10,7 +10,7 @@ function<double(double)> lspline(vector<double>&x, vector<double>&y);
 int main() {
 
 int nx = 10;
-int kx = 1000;
+int kx = 200;
 double k;
 vector<double> x(nx), y(nx), x_real(kx), y_real(kx);
 
@@ -35,7 +35,8 @@ for(size_t i=0;i<x.size();i++) cout << x[i] << " " << y[i] << endl;
 cout << "# m=2, S=0\n";
 for(size_t i=0;i<x_real.size();i++) cout << x_real[i] << " " << y_real[i] << endl;
 
-auto ls = lspline(x, y);
+// Make the linear spline
+function<double(double)> ls = lspline(x, y);
 
 int N = 200; double step = (x.back() - x.front()) / (N - 1);
 
@@ -43,8 +44,6 @@ cout << "# m=1, S=0\n";
 for(double z = x.front(); z < x.back(); z += step) {
 	cout << z << " " << ls(z) << endl;
 }
-
-
 
 return 0;
 }
