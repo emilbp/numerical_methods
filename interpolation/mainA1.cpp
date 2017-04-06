@@ -38,7 +38,7 @@ for(size_t i=0;i<x_real.size();i++) cout << x_real[i] << " " << y_real[i] << end
 // Make the linear spline
 function<double(double,int)> ls = lspline(x, y);
 
-int N = 100; double step = (x.back() - x.front()) / (N - 1);
+int N = 200; double step = (x.back() - x.front()) / (N - 1);
 
 cout << "# m=1, S=0\n";
 for(double z = x.front(); z < x.back(); z += step) {
@@ -46,8 +46,8 @@ for(double z = x.front(); z < x.back(); z += step) {
 }
 
 cout << "# m=2, S=0\n";
-for(double z = x.front(); z < 4; z+=step) {
-	cout << z << " " << ls(z,1) + 2 << endl;
+for(double z = x.front(); z < x.back(); z+=step) {
+	cout << z << " " << ls(z,1) << endl;
 }
 
 return 0;
