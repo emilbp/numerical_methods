@@ -5,7 +5,7 @@
 #include <iostream>
 using namespace std;
 
-function<double(double)> cspline(vector<double>&x, vector<double>&y) {
+function<double(double, int)> cspline(vector<double>&x, vector<double>&y) {
 //if(y.size() != x.size()) throw logic_error("x.size != y.size");
 
 int n = x.size();
@@ -40,7 +40,7 @@ for (int i = 0; i < n-1; i++) {
 	d[i] = (b[i] + b[i+1] - 2 * p[i]) / pow(dx[i],2);
 }
 
-return [x,y,n,b,c,d](double z)->double {
+return [x,y,n,b,c,d](double z, int flag = 0)->double {
 
 	int i = 0, j = n - 1;
 
@@ -55,6 +55,22 @@ return [x,y,n,b,c,d](double z)->double {
 	};
 
 	double dx = z - x[i];
-	return y[i] + dx * b[i] + c[i] * pow(dx, 2) + d[i] * pow(dx, 3);
+	switch(flag) {
+	case 0: { // Return cspline
+		return y[i] + dx * b[i] + c[i] * pow(dx, 2) + d[i] * pow(dx, 3);
+	}
+	case 1: { // Return integral
+		double S = 0;
+		for (int k = 0; k<i; k++) {
+			double dx = x[k+1] - x[k];
+			S += dx*(y[k] + dx*(b[k]/2 + dx*(c[k]/3 + dx*d[k]/4)));
+		}
+		return S + dx*(y[i] + dx*(b[i]/2 + dx*(c[i]/3 + dx*d[i]/4)));
+	}
+	case -1: { // Return derivative
+		return b[i] + 2*c[i]*dx + 3*d[i]*pow(dx,2);
+	}
+	default: {cerr << "cspline: wrong flag: " << flag << endl; return NAN;}
+	}
 };
 }
