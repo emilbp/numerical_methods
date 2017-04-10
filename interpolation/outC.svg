@@ -5,7 +5,7 @@
 <desc>This was produced by version 4.4 of GNU libplot, a free library for exporting 2-D vector graphics.</desc>
 <rect id="background" x="0" y="0" width="1" height="1" stroke="none" fill="white"/>
 <g id="content" transform="translate(0,1) scale(1,-1) scale(0.00024414) " xml:space="preserve" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10.433" stroke-dasharray="none" stroke-dashoffset="0" stroke-opacity="1" fill="none" fill-rule="evenodd" fill-opacity="1" font-style="normal" font-variant="normal" font-weight="normal" font-stretch="normal" font-size-adjust="none" letter-spacing="normal" word-spacing="normal" text-anchor="start">
-<text transform="translate(1780.3,3451.9) scale(1,-1) scale(8.6016) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >cspline</text>
+<text transform="translate(1015.4,3451.9) scale(1,-1) scale(8.6016) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >cspline with deriv and integ</text>
 <rect x="819.2" y="819.2" width="2457.6" height="2457.6" stroke-width="4.8188" />
 <text transform="translate(783.33,662.21) scale(1,-1) scale(6.4512) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >0</text>
 <line x1="819.2" y1="3276.8" x2="819.2" y2="3227.6" stroke-width="4.8188" />

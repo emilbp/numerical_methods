@@ -6,17 +6,17 @@ default: A
 A: outA1.svg outB.svg outC.svg
 
 outA1.svg: outA1.txt Makefile
-	$(GRAPH) --top-label 'lspline' \
+	$(GRAPH) --top-label 'lspline with integral' \
 	--output-format svg --x-label 'x' --y-label 'y' \
 	< $<  > $@
 
 outB.svg: outB.txt Makefile
-	$(GRAPH) --top-label 'qspline' \
+	$(GRAPH) --top-label 'qspline with deriv and integ' \
 	--output-format svg --x-label 'x' --y-label 'y' \
 	< $<  > $@
 
 outC.svg: outC.txt Makefile
-	$(GRAPH) --top-label 'cspline' \
+	$(GRAPH) --top-label 'cspline with deriv and integ' \
 	--output-format svg --x-label 'x' --y-label 'y' \
 	< $<  > $@
 
