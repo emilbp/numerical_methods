@@ -3,26 +3,26 @@ GRAPH = /usr/bin/graph
 .PHONY: default
 default: A
 
-A: outA1.svg outB.svg outC.svg out_Control.svg
+A: outA1.png outB.png outC.png out_Control.png
 
-outA1.svg: outA1.txt Makefile
+outA1.png: outA1.txt Makefile
 	$(GRAPH) --top-label 'lspline with integral' \
-	--output-format svg --x-label 'x' --y-label 'y' \
+	--output-format png --x-label 'x' --y-label 'y' \
 	< $<  > $@
 
-outB.svg: outB.txt Makefile
+outB.png: outB.txt Makefile
 	$(GRAPH) --top-label 'qspline with deriv and integ' \
-	--output-format svg --x-label 'x' --y-label 'y' \
+	--output-format png --x-label 'x' --y-label 'y' \
 	< $<  > $@
 
-outC.svg: outC.txt Makefile
+outC.png: outC.txt Makefile
 	$(GRAPH) --top-label 'cspline with deriv and integ' \
-	--output-format svg --x-label 'x' --y-label 'y' \
+	--output-format png --x-label 'x' --y-label 'y' \
 	< $<  > $@
 
-out_Control.svg: out_Control.txt Makefile
+out_Control.png: out_Control.txt Makefile
 	$(GRAPH) --top-label 'Analytical deriv and integ of cos(x)^2' \
-	--output-format svg --x-label 'x' --y-label 'y' \
+	--output-format png --x-label 'x' --y-label 'y' \
 	< $<  > $@
 
 outA1.txt: mainA1
@@ -72,4 +72,4 @@ cspline.o: cspline.cpp
 
 .PHONY: clean
 clean:
-	rm -f *.o out* *.svg mainA1 mainB mainC main_Control
+	rm -f *.o out* *.svg *.png mainA1 mainB mainC main_Control
