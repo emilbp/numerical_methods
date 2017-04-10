@@ -16,14 +16,14 @@ vector<double> x(nx), y(nx), x_real(kx), y_real(kx);
 
 // Generate sampled values
 for (int i = 0; i < nx; i++) {
-	x[i] = (double)i/2;
+	x[i] = (double)i;
 	y[i] = cos(x[i])*cos(x[i]);
 }
 
 // Generate 'real' values
 for (int i = 0; i < kx; i++) {
 	k = ((double)i * (double)nx) / (double)kx;
-	x_real[i] = k/2;
+	x_real[i] = k;
 	y_real[i] = cos(x_real[i])*cos(x_real[i]);
 }
 

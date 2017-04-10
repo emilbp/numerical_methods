@@ -12,7 +12,7 @@ int main() {
 int nx = 10;
 int kx = 200;
 double k;
-vector<double> x(nx), y(nx), x_real(kx), y_real(kx);
+vector<double> x(nx), y(nx), x_real(kx), y_real(kx), y_integ(kx), y_deriv(kx);
 
 // Generate sampled values
 for (int i = 0; i < nx; i++) {
@@ -25,6 +25,8 @@ for (int i = 0; i < kx; i++) {
 	k = ((double)i * (double)nx) / (double)kx;
 	x_real[i] = k;
 	y_real[i] = cos(x_real[i])*cos(x_real[i]);
+	y_deriv[i] = -2 * sin(x_real[i]) * cos(x_real[i]);
+	y_integ[i] = (x_real[i] + sin(x_real[i])*cos(x_real[i]))/2;
 }
 
 // Output sampled values
@@ -35,20 +37,10 @@ for(size_t i=0;i<x.size();i++) cout << x[i] << " " << y[i] << endl;
 cout << "# m=2, S=0\n";
 for(size_t i=0;i<x_real.size();i++) cout << x_real[i] << " " << y_real[i] << endl;
 
-// Make the linear spline
-function<double(double,int)> ls = lspline(x, y);
-
-int N = 200; double step = (x.back() - x.front()) / (N - 1);
-
-cout << "# m=1, S=0\n";
-for(double z = x.front(); z < x.back(); z += step) {
-	cout << z << " " << ls(z,0) << endl;
-}
-
 cout << "# m=3, S=0\n";
-for(double z = x.front(); z < x.back(); z+=step) {
-	cout << z << " " << ls(z,1) << endl;
-}
+for(size_t i=0;i<x_real.size();i++) cout << x_real[i] << " " << y_deriv[i] << endl;
 
+cout << "# m=4, S=0\n";
+for(size_t i=0;i<x_real.size();i++) cout << x_real[i] << " " << y_integ[i] << endl;
 return 0;
 }
