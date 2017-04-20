@@ -8,7 +8,7 @@ int jacobi_eigen(mat&, mat&, vec&);
 
 int main() {
 arma_rng::set_seed_random(); // Choose new random alues each time
-int n = 5;
+int n = 4;
 
 mat A = symmatu(randu(n,n)); // Random symmetric matrix
 mat V = mat(n,n);
