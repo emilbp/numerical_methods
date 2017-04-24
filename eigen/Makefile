@@ -11,6 +11,7 @@ outB.txt: mainB
 
 outBtimes.txt: mainB2
 	./mainB2 > outBtimes.txt
+	cat outBtimes.txt
 
 mainA: mainA.o jacobi_eigen.o
 	g++ mainA.o jacobi_eigen.o -o mainA -larmadillo
@@ -30,7 +31,7 @@ mainB.o: mainB.cpp
 jacobi_eigen_VbV.o: jacobi_eigen_VbV.cpp
 	g++ jacobi_eigen_VbV.cpp -c -larmadillo
 
-mainB2: mainB2.o
+mainB2: mainB2.o jacobi_eigen.o jacobi_eigen_VbV.o
 	g++ mainB2.o jacobi_eigen.o jacobi_eigen_VbV.o -o mainB2 -larmadillo
 
 mainB2.o: mainB2.cpp

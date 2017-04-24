@@ -21,10 +21,9 @@ for (int q = 0; q<n; q++) {		// q sweeps the columns
 		double c = cos(phi), s = sin(phi);
 		double app_new = c*c*app - 2*s*c*apq + s*s*aqq;
 		double aqq_new = s*s*app + 2*s*c*apq + c*c*aqq;
-
+		runs++;
 		// Limit criterion - if the value changed, update the entry in the matrix
 		if (app_new != app || aqq_new != aqq) {
-			runs++;
 			not_converged = true;
 			e(p) = app_new;
 			e(q) = aqq_new;

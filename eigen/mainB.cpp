@@ -31,6 +31,5 @@ A = B;
 runs = jacobi_eigen_VbV(A, V, e, 1, true);
 cout << "Last eigenvalue: " << e(0) << endl;
 
-
 return 0;
 }

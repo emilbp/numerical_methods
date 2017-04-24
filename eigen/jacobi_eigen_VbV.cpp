@@ -9,11 +9,11 @@ int n = A.n_cols, runs = 0, r1, c1, r2, c2, es;
 e = A.diag();
 V.eye();
 
-if (eigenvals == 0) {es = n;} else {es = eigenvals+1;}
+if (eigenvals == 0) {es = n-1;} else {es = eigenvals;}
 
 vec converged = zeros(es);
 
-for (int h = 0; h < es-1; h++) {
+for (int h = 0; h < es; h++) {
 int p = h;
 while(converged(h) == 0){
 
@@ -27,10 +27,10 @@ for (int q = p+1; q<n; q++) {		// q sweeps the columns
 		double c = cos(phi), s = sin(phi);
 		double app_new = c*c*app - 2*s*c*apq + s*s*aqq;
 		double aqq_new = s*s*app + 2*s*c*apq + c*c*aqq;
+		runs++;
 
 		// Limit criterion - if the value changed, update the entry in the matrix
 		if (app_new != app || aqq_new != aqq) {
-			runs++;
 			converged(h) = 0;
 			e(p) = app_new;
 			e(q) = aqq_new;

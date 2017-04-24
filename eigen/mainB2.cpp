@@ -15,7 +15,6 @@ mat A = symmatu(randu(n,n)); // Random symmetric matrix
 mat V = mat(n,n);
 vec e = vec(n);
 
-A.print("A is a random symmetric matrix:");
 mat B = A; // Keep a copy of A
 
 int sweep_runs = jacobi_eigen(A, V, e); // Computes all eigenvalue. If another integer is supplied as last argument, that number of EVs are calculated
@@ -32,26 +31,17 @@ vec vbv_e = e;
 A = B;
 int vbv_runs_first = jacobi_eigen_VbV(A, V, e, 1);
 
+cout << "A is a " << n << "x" << n << " symmetric matrix" << endl;
+if (n <= 5) B.print();
 cout << endl << "Number of rotations (cyclic sweep): " << sweep_runs << endl;
 cout << "Number of rotations (value by value): " << vbv_runs << endl;
-cout << "Number of rotations for first EV: " << vbv_runs_first << endl;
-/*
+cout << "Number of rotations for lowest EV: " << vbv_runs_first << endl;
 
-
-
-cout << endl << "### Jacobi Eigenvalue Algorithm, Value by Value" << endl;
-cout << "Number of runs: " << runs << endl;
-(V.t()*B*V).print("\nV^T*A*V (should be diagonal):");
-e.t().print("\nEigenvalues (should be equal to diagonal above):");
-A.print("\nA after (upper triangle should be zeroed, while the rest is untouched):");
-
-A = B;
-runs = jacobi_eigen_VbV(A, V, e, 1);
-cout << endl << "First eigenvalue: " << e(0) << endl;
-A = B;
-runs = jacobi_eigen_VbV(A, V, e, 1, true);
-cout << "Last eigenvalue: " << e(0) << endl;
-*/
-
+if (n <= 5) {
+(sweep_V.t()*B*sweep_V).print("\nDiagonalization by cyclic sweeps:");
+sweep_e.t().print("\nEVs by cyclic sweeps:");
+(vbv_V.t()*B*vbv_V).print("\nDiagonalization value by value:");
+vbv_e.t().print("\nEVs by cyclic sweeps:");
+}
 return 0;
 }
