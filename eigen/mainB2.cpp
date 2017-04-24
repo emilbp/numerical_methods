@@ -9,7 +9,7 @@ int jacobi_eigen_VbV(mat&, mat&, vec&, int = 0, bool = false);
 
 int main() {
 arma_rng::set_seed_random(); // Choose new random alues each time
-int n = 5;
+int n = 50;
 
 mat A = symmatu(randu(n,n)); // Random symmetric matrix
 mat V = mat(n,n);

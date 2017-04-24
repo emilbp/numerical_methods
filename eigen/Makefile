@@ -11,7 +11,6 @@ outB.txt: mainB
 
 outBtimes.txt: mainB2
 	./mainB2 > outBtimes.txt
-	cat outBtimes.txt
 
 mainA: mainA.o jacobi_eigen.o
 	g++ mainA.o jacobi_eigen.o -o mainA -larmadillo
