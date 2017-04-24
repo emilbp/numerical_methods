@@ -3,21 +3,27 @@
 
 using namespace arma;
 
-int jacobi_eigen(mat& A, mat& V, vec& e) {
-int n = A.n_cols, runs = 0, r1, c1, r2, c2;
-bool not_converged = true;
+int jacobi_eigen_VbV(mat& A, mat& V, vec& e, int eigenvals, bool reverse) {
+int n = A.n_cols, runs = 0, r1, c1, r2, c2, es;
+
 e = A.diag();
 V.eye();
 
-while(not_converged){
-not_converged = false;
+if (eigenvals == 0) {es = n;} else {es = eigenvals+1;}
 
-for (int q = 0; q<n; q++) {		// q sweeps the columns
-	for (int p = 0; p<q; p++) {	// p sweeps the rows
+vec converged = zeros(es);
+
+for (int h = 0; h < es-1; h++) {
+int p = h;
+while(converged(h) == 0){
+
+for (int q = p+1; q<n; q++) {		// q sweeps the columns
+// p sweeps the rows
 		double app = e(p);
 		double aqq = e(q);
 		double apq = A(p,q);
 		double phi = atan2(2*apq, aqq-app)/2;
+		if (reverse == true) {phi += 3.14159265358979323846/2;}
 		double c = cos(phi), s = sin(phi);
 		double app_new = c*c*app - 2*s*c*apq + s*s*aqq;
 		double aqq_new = s*s*app + 2*s*c*apq + c*c*aqq;
@@ -25,7 +31,7 @@ for (int q = 0; q<n; q++) {		// q sweeps the columns
 		// Limit criterion - if the value changed, update the entry in the matrix
 		if (app_new != app || aqq_new != aqq) {
 			runs++;
-			not_converged = true;
+			converged(h) = 0;
 			e(p) = app_new;
 			e(q) = aqq_new;
 			A(p,q) = 0;
@@ -47,12 +53,11 @@ for (int q = 0; q<n; q++) {		// q sweeps the columns
 			V(i,q) = c*viq + s*vip;
 
 			}
-		}
+		} else {converged(h) = 1;}
 	}
 
-}
 
 }
-
+}
 return runs;
 }

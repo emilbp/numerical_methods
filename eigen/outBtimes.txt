@@ -1,0 +1,10 @@
+A is a random symmetric matrix:
+   0.8553   0.2474   0.6268   0.2530   0.8752
+   0.2474   0.7693   0.8824   0.7842   0.5235
+   0.6268   0.8824   0.1170   0.7925   0.1753
+   0.2530   0.7842   0.7925   0.4738   0.7236
+   0.8752   0.5235   0.1753   0.7236   0.8436
+
+Number of rotations (cyclic sweep): 39
+Number of rotations (value by value): 191
+Number of rotations for first EV: 67
