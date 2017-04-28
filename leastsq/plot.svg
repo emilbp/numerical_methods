@@ -1,150 +1,176 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" baseProfile="full" id="body" width="8in" height="8in" viewBox="0 0 1 1" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
-<title>SVG drawing</title>
-<desc>This was produced by version 4.4 of GNU libplot, a free library for exporting 2-D vector graphics.</desc>
-<rect id="background" x="0" y="0" width="1" height="1" stroke="none" fill="white"/>
-<g id="content" transform="translate(0,1) scale(1,-1) scale(0.00024414) " xml:space="preserve" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10.433" stroke-dasharray="none" stroke-dashoffset="0" stroke-opacity="1" fill="none" fill-rule="evenodd" fill-opacity="1" font-style="normal" font-variant="normal" font-weight="normal" font-stretch="normal" font-size-adjust="none" letter-spacing="normal" word-spacing="normal" text-anchor="start">
-<text transform="translate(1299,3890.7) scale(1,-1) scale(10.035) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >LS fit with c +- deltac</text>
-<rect x="819.2" y="819.2" width="2867.2" height="2867.2" stroke-width="4.8188" />
-<text transform="translate(714.58,636.05) scale(1,-1) scale(7.5264) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >0.0</text>
-<line x1="819.2" y1="3686.4" x2="819.2" y2="3629.1" stroke-width="4.8188" />
-<line x1="819.2" y1="819.2" x2="819.2" y2="876.54" stroke-width="4.8188" />
-<text transform="translate(1192.4,636.05) scale(1,-1) scale(7.5264) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >0.5</text>
-<line x1="1297.1" y1="3686.4" x2="1297.1" y2="3629.1" stroke-width="4.8188" />
-<line x1="1297.1" y1="819.2" x2="1297.1" y2="876.54" stroke-width="4.8188" />
-<text transform="translate(1670.3,636.05) scale(1,-1) scale(7.5264) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >1.0</text>
-<line x1="1774.9" y1="3686.4" x2="1774.9" y2="3629.1" stroke-width="4.8188" />
-<line x1="1774.9" y1="819.2" x2="1774.9" y2="876.54" stroke-width="4.8188" />
-<text transform="translate(2148.2,636.05) scale(1,-1) scale(7.5264) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >1.5</text>
-<line x1="2252.8" y1="3686.4" x2="2252.8" y2="3629.1" stroke-width="4.8188" />
-<line x1="2252.8" y1="819.2" x2="2252.8" y2="876.54" stroke-width="4.8188" />
-<text transform="translate(2626,636.05) scale(1,-1) scale(7.5264) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >2.0</text>
-<line x1="2730.7" y1="3686.4" x2="2730.7" y2="3629.1" stroke-width="4.8188" />
-<line x1="2730.7" y1="819.2" x2="2730.7" y2="876.54" stroke-width="4.8188" />
-<text transform="translate(3103.9,636.05) scale(1,-1) scale(7.5264) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >2.5</text>
-<line x1="3208.5" y1="3686.4" x2="3208.5" y2="3629.1" stroke-width="4.8188" />
-<line x1="3208.5" y1="819.2" x2="3208.5" y2="876.54" stroke-width="4.8188" />
-<text transform="translate(3581.8,636.05) scale(1,-1) scale(7.5264) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >3.0</text>
-<line x1="3686.4" y1="3686.4" x2="3686.4" y2="3629.1" stroke-width="4.8188" />
-<line x1="3686.4" y1="819.2" x2="3686.4" y2="876.54" stroke-width="4.8188" />
-<text transform="translate(692.5,766.06) scale(1,-1) scale(7.5264) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >4</text>
-<line x1="3686.4" y1="819.2" x2="3629.1" y2="819.2" stroke-width="4.8188" />
-<line x1="819.2" y1="819.2" x2="876.54" y2="819.2" stroke-width="4.8188" />
-<text transform="translate(692.5,1339.5) scale(1,-1) scale(7.5264) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >6</text>
-<line x1="3686.4" y1="1392.6" x2="3629.1" y2="1392.6" stroke-width="4.8188" />
-<line x1="819.2" y1="1392.6" x2="876.54" y2="1392.6" stroke-width="4.8188" />
-<text transform="translate(692.5,1912.9) scale(1,-1) scale(7.5264) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >8</text>
-<line x1="3686.4" y1="1966.1" x2="3629.1" y2="1966.1" stroke-width="4.8188" />
-<line x1="819.2" y1="1966.1" x2="876.54" y2="1966.1" stroke-width="4.8188" />
-<text transform="translate(608.8,2486.4) scale(1,-1) scale(7.5264) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >10</text>
-<line x1="3686.4" y1="2539.5" x2="3629.1" y2="2539.5" stroke-width="4.8188" />
-<line x1="819.2" y1="2539.5" x2="876.54" y2="2539.5" stroke-width="4.8188" />
-<text transform="translate(608.8,3059.8) scale(1,-1) scale(7.5264) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >12</text>
-<line x1="3686.4" y1="3113" x2="3629.1" y2="3113" stroke-width="4.8188" />
-<line x1="819.2" y1="3113" x2="876.54" y2="3113" stroke-width="4.8188" />
-<text transform="translate(608.8,3633.3) scale(1,-1) scale(7.5264) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >14</text>
-<line x1="3686.4" y1="3686.4" x2="3629.1" y2="3686.4" stroke-width="4.8188" />
-<line x1="819.2" y1="3686.4" x2="876.54" y2="3686.4" stroke-width="4.8188" />
-<line x1="3686.4" y1="819.2" x2="3663.5" y2="819.2" stroke-width="4.8188" />
-<line x1="819.2" y1="819.2" x2="842.14" y2="819.2" stroke-width="4.8188" />
-<line x1="3686.4" y1="1105.9" x2="3663.5" y2="1105.9" stroke-width="4.8188" />
-<line x1="819.2" y1="1105.9" x2="842.14" y2="1105.9" stroke-width="4.8188" />
-<line x1="3686.4" y1="1392.6" x2="3663.5" y2="1392.6" stroke-width="4.8188" />
-<line x1="819.2" y1="1392.6" x2="842.14" y2="1392.6" stroke-width="4.8188" />
-<line x1="3686.4" y1="1679.4" x2="3663.5" y2="1679.4" stroke-width="4.8188" />
-<line x1="819.2" y1="1679.4" x2="842.14" y2="1679.4" stroke-width="4.8188" />
-<line x1="3686.4" y1="1966.1" x2="3663.5" y2="1966.1" stroke-width="4.8188" />
-<line x1="819.2" y1="1966.1" x2="842.14" y2="1966.1" stroke-width="4.8188" />
-<line x1="3686.4" y1="2252.8" x2="3663.5" y2="2252.8" stroke-width="4.8188" />
-<line x1="819.2" y1="2252.8" x2="842.14" y2="2252.8" stroke-width="4.8188" />
-<line x1="3686.4" y1="2539.5" x2="3663.5" y2="2539.5" stroke-width="4.8188" />
-<line x1="819.2" y1="2539.5" x2="842.14" y2="2539.5" stroke-width="4.8188" />
-<line x1="3686.4" y1="2826.2" x2="3663.5" y2="2826.2" stroke-width="4.8188" />
-<line x1="819.2" y1="2826.2" x2="842.14" y2="2826.2" stroke-width="4.8188" />
-<line x1="3686.4" y1="3113" x2="3663.5" y2="3113" stroke-width="4.8188" />
-<line x1="819.2" y1="3113" x2="842.14" y2="3113" stroke-width="4.8188" />
-<line x1="3686.4" y1="3399.7" x2="3663.5" y2="3399.7" stroke-width="4.8188" />
-<line x1="819.2" y1="3399.7" x2="842.14" y2="3399.7" stroke-width="4.8188" />
-<line x1="3686.4" y1="3686.4" x2="3663.5" y2="3686.4" stroke-width="4.8188" />
-<line x1="819.2" y1="3686.4" x2="842.14" y2="3686.4" stroke-width="4.8188" />
-<text transform="translate(2215.2,448.25) scale(1,-1) scale(7.5264) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >x</text>
-<text transform="matrix(0 7.5264 7.5264 0 508.43 1552) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >F</text>
-<text transform="matrix(0 4.5158 4.5158 0 538.54 1644) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >c</text>
-<text transform="matrix(0 7.5264 7.5264 0 508.43 1689.1) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >(x), F</text>
-<text transform="matrix(0 4.5158 4.5158 0 538.54 2040.3) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >c-dc</text>
-<text transform="matrix(0 7.5264 7.5264 0 508.43 2233.6) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >(x), F</text>
-<text transform="matrix(0 4.5158 4.5158 0 538.54 2584.8) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >c+dc</text>
-<text transform="matrix(0 7.5264 7.5264 0 508.43 2778.1) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >(x)</text>
-<line x1="887.89" y1="3051.6" x2="941.65" y2="3051.6" stroke-width="2.688" />
-<line x1="914.77" y1="3024.7" x2="914.77" y2="3078.5" stroke-width="2.688" />
-<line x1="887.89" y1="3297.6" x2="941.65" y2="3297.6" stroke-width="2.688" />
-<line x1="914.77" y1="3270.7" x2="914.77" y2="3324.5" stroke-width="2.688" />
-<line x1="887.89" y1="3543.6" x2="941.65" y2="3543.6" stroke-width="2.688" />
-<line x1="914.77" y1="3516.7" x2="914.77" y2="3570.5" stroke-width="2.688" />
-<polyline points="914.77,3051.6 914.77,3297.6 914.77,3543.6 " stroke-width="4.8188" />
-<line x1="930.9" y1="2217.2" x2="984.66" y2="2217.2" stroke-width="2.688" />
-<line x1="957.78" y1="2190.4" x2="957.78" y2="2244.1" stroke-width="2.688" />
-<line x1="930.9" y1="2320.2" x2="984.66" y2="2320.2" stroke-width="2.688" />
-<line x1="957.78" y1="2293.3" x2="957.78" y2="2347.1" stroke-width="2.688" />
-<line x1="930.9" y1="2423.1" x2="984.66" y2="2423.1" stroke-width="2.688" />
-<line x1="957.78" y1="2396.2" x2="957.78" y2="2450" stroke-width="2.688" />
-<polyline points="957.78,2217.2 957.78,2320.2 957.78,2423.1 " stroke-width="4.8188" />
-<line x1="993.98" y1="1642.7" x2="1047.7" y2="1642.7" stroke-width="2.688" />
-<line x1="1020.9" y1="1615.8" x2="1020.9" y2="1669.5" stroke-width="2.688" />
-<line x1="993.98" y1="1787.5" x2="1047.7" y2="1787.5" stroke-width="2.688" />
-<line x1="1020.9" y1="1760.6" x2="1020.9" y2="1814.3" stroke-width="2.688" />
-<line x1="993.98" y1="1932.2" x2="1047.7" y2="1932.2" stroke-width="2.688" />
-<line x1="1020.9" y1="1905.4" x2="1020.9" y2="1959.1" stroke-width="2.688" />
-<polyline points="1020.9,1642.7 1020.9,1787.5 1020.9,1932.2 " stroke-width="4.8188" />
-<line x1="1085.7" y1="1409" x2="1139.5" y2="1409" stroke-width="2.688" />
-<line x1="1112.6" y1="1382.1" x2="1112.6" y2="1435.9" stroke-width="2.688" />
-<line x1="1085.7" y1="1524.5" x2="1139.5" y2="1524.5" stroke-width="2.688" />
-<line x1="1112.6" y1="1497.7" x2="1112.6" y2="1551.4" stroke-width="2.688" />
-<line x1="1085.7" y1="1640.1" x2="1139.5" y2="1640.1" stroke-width="2.688" />
-<line x1="1112.6" y1="1613.2" x2="1112.6" y2="1667" stroke-width="2.688" />
-<polyline points="1112.6,1409 1112.6,1524.5 1112.6,1640.1 " stroke-width="4.8188" />
-<line x1="1219.5" y1="1069.2" x2="1273.3" y2="1069.2" stroke-width="2.688" />
-<line x1="1246.4" y1="1042.3" x2="1246.4" y2="1096.1" stroke-width="2.688" />
-<line x1="1219.5" y1="1265" x2="1273.3" y2="1265" stroke-width="2.688" />
-<line x1="1246.4" y1="1238.2" x2="1246.4" y2="1291.9" stroke-width="2.688" />
-<line x1="1219.5" y1="1460.9" x2="1273.3" y2="1460.9" stroke-width="2.688" />
-<line x1="1246.4" y1="1434" x2="1246.4" y2="1487.8" stroke-width="2.688" />
-<polyline points="1246.4,1069.2 1246.4,1265 1246.4,1460.9 " stroke-width="4.8188" />
-<line x1="1412.6" y1="1189.4" x2="1466.4" y2="1189.4" stroke-width="2.688" />
-<line x1="1439.5" y1="1162.5" x2="1439.5" y2="1216.2" stroke-width="2.688" />
-<line x1="1412.6" y1="1362.8" x2="1466.4" y2="1362.8" stroke-width="2.688" />
-<line x1="1439.5" y1="1335.9" x2="1439.5" y2="1389.7" stroke-width="2.688" />
-<line x1="1412.6" y1="1536.3" x2="1466.4" y2="1536.3" stroke-width="2.688" />
-<line x1="1439.5" y1="1509.4" x2="1439.5" y2="1563.2" stroke-width="2.688" />
-<polyline points="1439.5,1189.4 1439.5,1362.8 1439.5,1536.3 " stroke-width="4.8188" />
-<line x1="1694.5" y1="1053.5" x2="1748.3" y2="1053.5" stroke-width="2.688" />
-<line x1="1721.4" y1="1026.6" x2="1721.4" y2="1080.3" stroke-width="2.688" />
-<line x1="1694.5" y1="1298.9" x2="1748.3" y2="1298.9" stroke-width="2.688" />
-<line x1="1721.4" y1="1272" x2="1721.4" y2="1325.8" stroke-width="2.688" />
-<line x1="1694.5" y1="1544.3" x2="1748.3" y2="1544.3" stroke-width="2.688" />
-<line x1="1721.4" y1="1517.4" x2="1721.4" y2="1571.2" stroke-width="2.688" />
-<polyline points="1721.4,1053.5 1721.4,1298.9 1721.4,1544.3 " stroke-width="4.8188" />
-<line x1="2103.6" y1="1568.4" x2="2157.3" y2="1568.4" stroke-width="2.688" />
-<line x1="2130.5" y1="1541.5" x2="2130.5" y2="1595.3" stroke-width="2.688" />
-<line x1="2103.6" y1="1669" x2="2157.3" y2="1669" stroke-width="2.688" />
-<line x1="2130.5" y1="1642.2" x2="2130.5" y2="1695.9" stroke-width="2.688" />
-<line x1="2103.6" y1="1769.7" x2="2157.3" y2="1769.7" stroke-width="2.688" />
-<line x1="2130.5" y1="1742.8" x2="2130.5" y2="1796.6" stroke-width="2.688" />
-<polyline points="2130.5,1568.4 2130.5,1669 2130.5,1769.7 " stroke-width="4.8188" />
-<line x1="2699" y1="1912.5" x2="2752.8" y2="1912.5" stroke-width="2.688" />
-<line x1="2725.9" y1="1885.6" x2="2725.9" y2="1939.3" stroke-width="2.688" />
-<line x1="2699" y1="2223" x2="2752.8" y2="2223" stroke-width="2.688" />
-<line x1="2725.9" y1="2196.1" x2="2725.9" y2="2249.9" stroke-width="2.688" />
-<line x1="2699" y1="2533.5" x2="2752.8" y2="2533.5" stroke-width="2.688" />
-<line x1="2725.9" y1="2506.6" x2="2725.9" y2="2560.4" stroke-width="2.688" />
-<polyline points="2725.9,1912.5 2725.9,2223 2725.9,2533.5 " stroke-width="4.8188" />
-<line x1="3563.9" y1="2640.7" x2="3617.7" y2="2640.7" stroke-width="2.688" />
-<line x1="3590.8" y1="2613.9" x2="3590.8" y2="2667.6" stroke-width="2.688" />
-<line x1="3563.9" y1="2928" x2="3617.7" y2="2928" stroke-width="2.688" />
-<line x1="3590.8" y1="2901.1" x2="3590.8" y2="2954.9" stroke-width="2.688" />
-<line x1="3563.9" y1="3215.3" x2="3617.7" y2="3215.3" stroke-width="2.688" />
-<line x1="3590.8" y1="3188.4" x2="3590.8" y2="3242.2" stroke-width="2.688" />
-<polyline points="3590.8,2640.7 3590.8,2928 3590.8,3215.3 " stroke-width="4.8188" />
+<?xml version="1.0" encoding="utf-8"  standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 
+ width="600" height="480" 
+ viewBox="0 0 600 480"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+
+<title>Gnuplot</title>
+<desc>Produced by GNUPLOT 4.6 patchlevel 4 </desc>
+
+<g id="gnuplot_canvas">
+
+<rect x="0" y="0" width="600" height="480" fill="none"/>
+<defs>
+
+	<circle id='gpDot' r='0.5' stroke-width='0.5'/>
+	<path id='gpPt0' stroke-width='0.222' stroke='currentColor' d='M-1,0 h2 M0,-1 v2'/>
+	<path id='gpPt1' stroke-width='0.222' stroke='currentColor' d='M-1,-1 L1,1 M1,-1 L-1,1'/>
+	<path id='gpPt2' stroke-width='0.222' stroke='currentColor' d='M-1,0 L1,0 M0,-1 L0,1 M-1,-1 L1,1 M-1,1 L1,-1'/>
+	<rect id='gpPt3' stroke-width='0.222' stroke='currentColor' x='-1' y='-1' width='2' height='2'/>
+	<rect id='gpPt4' stroke-width='0.222' stroke='currentColor' fill='currentColor' x='-1' y='-1' width='2' height='2'/>
+	<circle id='gpPt5' stroke-width='0.222' stroke='currentColor' cx='0' cy='0' r='1'/>
+	<use xlink:href='#gpPt5' id='gpPt6' fill='currentColor' stroke='none'/>
+	<path id='gpPt7' stroke-width='0.222' stroke='currentColor' d='M0,-1.33 L-1.33,0.67 L1.33,0.67 z'/>
+	<use xlink:href='#gpPt7' id='gpPt8' fill='currentColor' stroke='none'/>
+	<use xlink:href='#gpPt7' id='gpPt9' stroke='currentColor' transform='rotate(180)'/>
+	<use xlink:href='#gpPt9' id='gpPt10' fill='currentColor' stroke='none'/>
+	<use xlink:href='#gpPt3' id='gpPt11' stroke='currentColor' transform='rotate(45)'/>
+	<use xlink:href='#gpPt11' id='gpPt12' fill='currentColor' stroke='none'/>
+</defs>
+<g style="fill:none; color:white; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
+</g>
+<g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
+	<path stroke='black'  d='M45.6,444.0 L54.6,444.0 M575.0,444.0 L566.0,444.0  h0.01'/>	<g transform="translate(37.3,448.5)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end">
+		<text>-30</text>
+	</g>
+	<path stroke='black'  d='M45.6,396.5 L54.6,396.5 M575.0,396.5 L566.0,396.5  h0.01'/>	<g transform="translate(37.3,401.0)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end">
+		<text>-20</text>
+	</g>
+	<path stroke='black'  d='M45.6,349.0 L54.6,349.0 M575.0,349.0 L566.0,349.0  h0.01'/>	<g transform="translate(37.3,353.5)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end">
+		<text>-10</text>
+	</g>
+	<path stroke='black'  d='M45.6,301.6 L54.6,301.6 M575.0,301.6 L566.0,301.6  h0.01'/>	<g transform="translate(37.3,306.1)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end">
+		<text> 0</text>
+	</g>
+	<path stroke='black'  d='M45.6,254.1 L54.6,254.1 M575.0,254.1 L566.0,254.1  h0.01'/>	<g transform="translate(37.3,258.6)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end">
+		<text> 10</text>
+	</g>
+	<path stroke='black'  d='M45.6,206.6 L54.6,206.6 M575.0,206.6 L566.0,206.6  h0.01'/>	<g transform="translate(37.3,211.1)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end">
+		<text> 20</text>
+	</g>
+	<path stroke='black'  d='M45.6,159.1 L54.6,159.1 M575.0,159.1 L566.0,159.1  h0.01'/>	<g transform="translate(37.3,163.6)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end">
+		<text> 30</text>
+	</g>
+	<path stroke='black'  d='M45.6,111.7 L54.6,111.7 M575.0,111.7 L566.0,111.7  h0.01'/>	<g transform="translate(37.3,116.2)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end">
+		<text> 40</text>
+	</g>
+	<path stroke='black'  d='M45.6,64.2 L54.6,64.2 M575.0,64.2 L566.0,64.2  h0.01'/>	<g transform="translate(37.3,68.7)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end">
+		<text> 50</text>
+	</g>
+	<path stroke='black'  d='M45.6,16.7 L54.6,16.7 M575.0,16.7 L566.0,16.7  h0.01'/>	<g transform="translate(37.3,21.2)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end">
+		<text> 60</text>
+	</g>
+	<path stroke='black'  d='M45.6,444.0 L45.6,435.0 M45.6,16.7 L45.6,25.7  h0.01'/>	<g transform="translate(45.6,466.5)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:middle">
+		<text> 0</text>
+	</g>
+	<path stroke='black'  d='M133.8,444.0 L133.8,435.0 M133.8,16.7 L133.8,25.7  h0.01'/>	<g transform="translate(133.8,466.5)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:middle">
+		<text> 0.5</text>
+	</g>
+	<path stroke='black'  d='M222.1,444.0 L222.1,435.0 M222.1,16.7 L222.1,25.7  h0.01'/>	<g transform="translate(222.1,466.5)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:middle">
+		<text> 1</text>
+	</g>
+	<path stroke='black'  d='M310.3,444.0 L310.3,435.0 M310.3,16.7 L310.3,25.7  h0.01'/>	<g transform="translate(310.3,466.5)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:middle">
+		<text> 1.5</text>
+	</g>
+	<path stroke='black'  d='M398.5,444.0 L398.5,435.0 M398.5,16.7 L398.5,25.7  h0.01'/>	<g transform="translate(398.5,466.5)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:middle">
+		<text> 2</text>
+	</g>
+	<path stroke='black'  d='M486.8,444.0 L486.8,435.0 M486.8,16.7 L486.8,25.7  h0.01'/>	<g transform="translate(486.8,466.5)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:middle">
+		<text> 2.5</text>
+	</g>
+	<path stroke='black'  d='M575.0,444.0 L575.0,435.0 M575.0,16.7 L575.0,25.7  h0.01'/>	<g transform="translate(575.0,466.5)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:middle">
+		<text> 3</text>
+	</g>
+	<path stroke='black'  d='M45.6,16.7 L45.6,444.0 L575.0,444.0 L575.0,16.7 L45.6,16.7 Z  h0.01'/></g>
+	<g id="gnuplot_plot_1" ><title>gnuplot_plot_1</title>
+<g style="fill:none; color:red; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
+	<g transform="translate(507.9,39.2)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end">
+		<text>data points</text>
+	</g>
+	<path  d='M516.2,34.7 L558.4,34.7 M516.2,30.2 L516.2,39.2 M558.4,30.2 L558.4,39.2 M63.2,245.6 L63.2,237.5 
+		M58.7,245.6 L67.7,245.6 M58.7,237.5 L67.7,237.5 M71.2,259.4 L71.2,256.0 M66.7,259.4 L75.7,259.4 
+		M66.7,256.0 L75.7,256.0 M82.8,268.9 L82.8,264.1 M78.3,268.9 L87.3,268.9 M78.3,264.1 L87.3,264.1 
+		M99.8,272.8 L99.8,269.0 M95.3,272.8 L104.3,272.8 M95.3,269.0 L104.3,269.0 M124.5,278.4 L124.5,272.0 
+		M120.0,278.4 L129.0,278.4 M120.0,272.0 L129.0,272.0 M160.1,276.4 L160.1,270.7 M155.6,276.4 L164.6,276.4 
+		M155.6,270.7 L164.6,270.7 M212.2,278.7 L212.2,270.6 M207.7,278.7 L216.7,278.7 M207.7,270.6 L216.7,270.6 
+		M287.7,270.2 L287.7,266.8 M283.2,270.2 L292.2,270.2 M283.2,266.8 L292.2,266.8 M397.7,264.5 L397.7,254.2 
+		M393.2,264.5 L402.2,264.5 M393.2,254.2 L402.2,254.2 M557.4,252.4 L557.4,242.9 M552.9,252.4 L561.9,252.4 
+		M552.9,242.9 L561.9,242.9  h0.01'/>	<use xlink:href='#gpPt0' transform='translate(63.2,241.5) scale(4.50)'/>
+	<use xlink:href='#gpPt0' transform='translate(71.2,257.7) scale(4.50)'/>
+	<use xlink:href='#gpPt0' transform='translate(82.8,266.5) scale(4.50)'/>
+	<use xlink:href='#gpPt0' transform='translate(99.8,270.9) scale(4.50)'/>
+	<use xlink:href='#gpPt0' transform='translate(124.5,275.2) scale(4.50)'/>
+	<use xlink:href='#gpPt0' transform='translate(160.1,273.6) scale(4.50)'/>
+	<use xlink:href='#gpPt0' transform='translate(212.2,274.6) scale(4.50)'/>
+	<use xlink:href='#gpPt0' transform='translate(287.7,268.5) scale(4.50)'/>
+	<use xlink:href='#gpPt0' transform='translate(397.7,259.3) scale(4.50)'/>
+	<use xlink:href='#gpPt0' transform='translate(557.4,247.7) scale(4.50)'/>
+	<use xlink:href='#gpPt0' transform='translate(537.3,34.7) scale(4.50)'/>
+</g>
+	</g>
+	<g id="gnuplot_plot_2" ><title>gnuplot_plot_2</title>
+<g style="fill:none; color:green; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
+	<g transform="translate(507.9,57.2)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end">
+		<text>fit</text>
+	</g>
+	<path  d='M516.2,52.7 L558.4,52.7 M61.5,238.3 L66.7,250.6 L71.9,257.9 L77.0,262.6 L82.2,265.9 L87.4,268.3 
+		L92.6,270.0 L97.8,271.3 L103.0,272.3 L108.2,273.1 L113.4,273.7 L118.5,274.1 L123.7,274.4 L128.9,274.7 
+		L134.1,274.8 L139.3,274.9 L144.5,275.0 L149.7,275.0 L154.8,274.9 L160.0,274.8 L165.2,274.7 L170.4,274.6 
+		L175.6,274.4 L180.8,274.2 L186.0,274.0 L191.2,273.8 L196.3,273.6 L201.5,273.4 L206.7,273.1 L211.9,272.8 
+		L217.1,272.6 L222.3,272.3 L227.5,272.0 L232.7,271.7 L237.8,271.4 L243.0,271.1 L248.2,270.8 L253.4,270.5 
+		L258.6,270.1 L263.8,269.8 L269.0,269.5 L274.2,269.1 L279.3,268.8 L284.5,268.4 L289.7,268.1 L294.9,267.7 
+		L300.1,267.4 L305.3,267.0 L310.5,266.7 L315.6,266.3 L320.8,265.9 L326.0,265.6 L331.2,265.2 L336.4,264.8 
+		L341.6,264.5 L346.8,264.1 L352.0,263.7 L357.1,263.3 L362.3,263.0 L367.5,262.6 L372.7,262.2 L377.9,261.8 
+		L383.1,261.4 L388.3,261.0 L393.5,260.7 L398.6,260.3 L403.8,259.9 L409.0,259.5 L414.2,259.1 L419.4,258.7 
+		L424.6,258.3 L429.8,257.9 L434.9,257.5 L440.1,257.1 L445.3,256.7 L450.5,256.4 L455.7,256.0 L460.9,255.6 
+		L466.1,255.2 L471.3,254.8 L476.4,254.4 L481.6,254.0 L486.8,253.6 L492.0,253.2 L497.2,252.8 L502.4,252.4 
+		L507.6,252.0 L512.8,251.6 L517.9,251.2 L523.1,250.8 L528.3,250.4 L533.5,250.0 L538.7,249.5 L543.9,249.1 
+		L549.1,248.7 L554.3,248.3 L559.4,247.9 L564.6,247.5 L569.8,247.1 L575.0,246.7  h0.01'/></g>
+	</g>
+	<g id="gnuplot_plot_3" ><title>gnuplot_plot_3</title>
+<g style="fill:none; color:blue; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
+	<g transform="translate(507.9,75.2)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end">
+		<text>'outA.txt' i 1 u 1:3</text>
+	</g>
+	<path  d='M516.2,70.7 L558.4,70.7 M61.5,37.3 L66.7,81.2 L71.9,107.1 L77.0,124.0 L82.2,135.6 L87.4,143.9 
+		L92.6,150.1 L97.8,154.7 L103.0,158.2 L108.2,160.8 L113.4,162.8 L118.5,164.3 L123.7,165.4 L128.9,166.1 
+		L134.1,166.6 L139.3,166.8 L144.5,166.9 L149.7,166.8 L154.8,166.5 L160.0,166.1 L165.2,165.6 L170.4,165.0 
+		L175.6,164.4 L180.8,163.7 L186.0,162.9 L191.2,162.0 L196.3,161.1 L201.5,160.2 L206.7,159.2 L211.9,158.1 
+		L217.1,157.1 L222.3,156.0 L227.5,154.9 L232.7,153.7 L237.8,152.5 L243.0,151.3 L248.2,150.1 L253.4,148.9 
+		L258.6,147.6 L263.8,146.4 L269.0,145.1 L274.2,143.8 L279.3,142.5 L284.5,141.1 L289.7,139.8 L294.9,138.4 
+		L300.1,137.1 L305.3,135.7 L310.5,134.3 L315.6,133.0 L320.8,131.6 L326.0,130.2 L331.2,128.8 L336.4,127.3 
+		L341.6,125.9 L346.8,124.5 L352.0,123.1 L357.1,121.6 L362.3,120.2 L367.5,118.7 L372.7,117.3 L377.9,115.8 
+		L383.1,114.4 L388.3,112.9 L393.5,111.4 L398.6,109.9 L403.8,108.5 L409.0,107.0 L414.2,105.5 L419.4,104.0 
+		L424.6,102.5 L429.8,101.0 L434.9,99.5 L440.1,98.0 L445.3,96.5 L450.5,95.0 L455.7,93.5 L460.9,92.0 
+		L466.1,90.5 L471.3,89.0 L476.4,87.5 L481.6,86.0 L486.8,84.4 L492.0,82.9 L497.2,81.4 L502.4,79.9 
+		L507.6,78.4 L512.8,76.8 L517.9,75.3 L523.1,73.8 L528.3,72.2 L533.5,70.7 L538.7,69.2 L543.9,67.6 
+		L549.1,66.1 L554.3,64.6 L559.4,63.0 L564.6,61.5 L569.8,59.9 L575.0,58.4  h0.01'/></g>
+	</g>
+	<g id="gnuplot_plot_4" ><title>gnuplot_plot_4</title>
+<g style="fill:none; color:cyan; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
+	<g transform="translate(507.9,93.2)" style="stroke:none; fill:black; font-family:Arial; font-size:12.00pt; text-anchor:end">
+		<text>'outA.txt' i 1 u 1:4</text>
+	</g>
+	<path  d='M516.2,88.7 L558.4,88.7 M61.5,439.2 L66.7,420.0 L71.9,408.6 L77.0,401.3 L82.2,396.2 L87.4,392.6 
+		L92.6,389.9 L97.8,387.9 L103.0,386.5 L108.2,385.4 L113.4,384.5 L118.5,383.9 L123.7,383.5 L128.9,383.2 
+		L134.1,383.1 L139.3,383.0 L144.5,383.1 L149.7,383.2 L154.8,383.3 L160.0,383.5 L165.2,383.8 L170.4,384.1 
+		L175.6,384.4 L180.8,384.8 L186.0,385.2 L191.2,385.6 L196.3,386.1 L201.5,386.6 L206.7,387.1 L211.9,387.6 
+		L217.1,388.1 L222.3,388.6 L227.5,389.2 L232.7,389.7 L237.8,390.3 L243.0,390.9 L248.2,391.4 L253.4,392.0 
+		L258.6,392.6 L263.8,393.3 L269.0,393.9 L274.2,394.5 L279.3,395.1 L284.5,395.8 L289.7,396.4 L294.9,397.0 
+		L300.1,397.7 L305.3,398.3 L310.5,399.0 L315.6,399.7 L320.8,400.3 L326.0,401.0 L331.2,401.7 L336.4,402.3 
+		L341.6,403.0 L346.8,403.7 L352.0,404.4 L357.1,405.1 L362.3,405.7 L367.5,406.4 L372.7,407.1 L377.9,407.8 
+		L383.1,408.5 L388.3,409.2 L393.5,409.9 L398.6,410.6 L403.8,411.3 L409.0,412.0 L414.2,412.7 L419.4,413.4 
+		L424.6,414.1 L429.8,414.8 L434.9,415.5 L440.1,416.2 L445.3,417.0 L450.5,417.7 L455.7,418.4 L460.9,419.1 
+		L466.1,419.8 L471.3,420.5 L476.4,421.3 L481.6,422.0 L486.8,422.7 L492.0,423.4 L497.2,424.1 L502.4,424.9 
+		L507.6,425.6 L512.8,426.3 L517.9,427.0 L523.1,427.7 L528.3,428.5 L533.5,429.2 L538.7,429.9 L543.9,430.7 
+		L549.1,431.4 L554.3,432.1 L559.4,432.8 L564.6,433.6 L569.8,434.3 L575.0,435.0  h0.01'/></g>
+	</g>
+<g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
+	<path stroke='black'  d='M45.6,16.7 L45.6,444.0 L575.0,444.0 L575.0,16.7 L45.6,16.7 Z  h0.01'/></g>
 </g>
 </svg>
+

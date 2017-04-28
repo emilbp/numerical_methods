@@ -3,21 +3,20 @@ default: A
 
 A: plot.svg
 
-plot.svg: outA.txt Makefile
-	graph --display-type svg \
-	--width 0.7 --height 0.7 \
-	--x-label "x" --y-label "F\sbc\eb(x), F\sbc-dc\eb(x), F\sbc+dc\eb(x)" \
-	--top-label "LS fit with c +- deltac" \
-	outA.txt > plot.svg
+plot.svg: plot.gpi outA.txt Makefile
+	gnuplot $<
 
 outA.txt: mainA
 	./mainA > outA.txt
 
-mainA: mainA.o
-	g++ -std=c++11 mainA.o -o mainA -larmadillo
+mainA: mainA.o lsfit.o ../lineq/qr_gs_dec.o ../lineq/qr_gs_solve.o ../lineq/qr_gs_inverse.o
+	g++ -std=c++11 mainA.o lsfit.o ../lineq/qr_gs_dec.o ../lineq/qr_gs_solve.o ../lineq/qr_gs_inverse.o -o mainA -larmadillo
 
 mainA.o: mainA.cpp
 	g++ -std=c++11 mainA.cpp -c -larmadillo
+
+lsfit.o: lsfit.cpp
+	g++ -std=c++11 lsfit.cpp -c -larmadillo
 
 .PHONY: clean
 

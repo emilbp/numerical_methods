@@ -1,0 +1,6 @@
+set term svg
+set out "plot.svg"
+plot 'outA.txt' i 0 w errorbars title columnheader(1),\
+     'outA.txt' i 1 u 1:2 w lines title columnheader(1),\
+     'outA.txt' i 1 u 1:3 w lines,\
+     'outA.txt' i 1 u 1:4 w lines
