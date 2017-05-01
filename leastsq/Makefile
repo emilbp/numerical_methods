@@ -1,9 +1,9 @@
 .PHONY: default
 default: A
 
-A: plot.svg
+A: plot.png
 
-plot.svg: plot.gpi outA.txt Makefile
+plot.png: plot.gpi outA.txt Makefile
 	gnuplot $<
 
 outA.txt: mainA
@@ -21,4 +21,4 @@ lsfit.o: lsfit.cpp
 .PHONY: clean
 
 clean:
-	rm -f *.o out* *.svg mainA
+	rm -f *.o out* *.png mainA
