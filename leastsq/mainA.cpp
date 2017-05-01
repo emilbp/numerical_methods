@@ -34,6 +34,8 @@ mat S(m,m);
 vec c(m);
 
 lsfit(x,y,dy,funs,c,S);
+
+
 vec dc(m);
 
 for (int i = 0; i < m; i++) dc[i] = sqrt(S(i,i));
@@ -41,13 +43,13 @@ for (int i = 0; i < m; i++) dc[i] = sqrt(S(i,i));
 int nx = 100;
 vec h = linspace(0.09, 3, nx);
 
-cout << "\"data points\"" << endl;
+//cout << "\"data points\"" << endl;
 for (int i = 0; i < n; i++) {
 	cout << x[i] <<" "<< y[i] << " " << dy[i] << endl;
 }
 cout << endl << endl;
 
-cout << "\"fit\"" << endl;
+//cout << "\"fit\"" << endl;
 for (int i = 0; i < nx; i++) {
 	cout << h[i] << " " << fit_fun(c,h[i]) << " " << fit_fun(c+dc, h[i]) << " " << fit_fun(c-dc, h[i]) << endl;
 }
