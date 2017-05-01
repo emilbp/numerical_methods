@@ -22,22 +22,13 @@ funs.push_back([](double x){return 1.0;});
 funs.push_back([](double x){return x;});
 funs.push_back([](double x){return 1/x;});
 
-auto fit_fun = [&](vec c,double x){
-double s=0;
-for(int i=0;i<c.size();i++) s+= c[i]*funs[i](x);
-return s;
-};
-auto fun_to_fit = [](double x){return 1.+2.*x+3./x;};
-
 int m=funs.size();
 mat S(m,m);
 vec c(m);
 
 lsfit(x,y,dy,funs,c,S);
 
-
 vec dc(m);
-
 for (int i = 0; i < m; i++) dc[i] = sqrt(S(i,i));
 
 int nx = 100;
@@ -49,7 +40,14 @@ for (int i = 0; i < n; i++) {
 }
 cout << endl << endl;
 
-cout << "\"fit\"" << " \"upper bound\" \"lower bound\"" << endl;
+// Function to plot the results
+auto fit_fun = [&](vec c,double x){
+double s=0;
+for(int i=0;i<c.size();i++) s+= c[i]*funs[i](x);
+return s;
+};
+
+cout << "\"F_{c}(x)\"" << " \"F_{c+dc}(x)\" \"F_{c-dc}(x)\"" << endl;
 for (int i = 0; i < nx; i++) {
 	cout << h[i] << " " << fit_fun(c,h[i]) << " " << fit_fun(c+dc, h[i]) << " " << fit_fun(c-dc, h[i]) << endl;
 }

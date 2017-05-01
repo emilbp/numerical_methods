@@ -1,5 +1,7 @@
 set term png
 set out "plot.png"
+set termopt enhanced
+set title "least squares fit of F_{c}(x)=c_{0}+c_{1}x+c_{2}/x" 
 
 plot 'outA.txt' i 0 w errorbars title columnheader(1),\
      'outA.txt' i 1 u 1:2 w lines title columnheader(1),\
