@@ -1,0 +1,32 @@
+Minimum of Rosenbrock's valley function (numeric)
+Initial vector x0:
+   2.0000
+   1.0000
+f(x0):
+   2.4060e+03
+  -6.0000e+02
+
+Solution x:
+  -1.0000
+   1.0000
+f(x):
+  -7.9509e-10
+  -1.3252e-10
+
+Minimum of Rosenbrock's valley function (analytic jacobian)
+Initial vector x0:
+   2.0000
+   1.0000
+f(x) is
+   2.4060e+03
+  -6.0000e+02
+Solution x using analytic jacobian:
+  -1.0000
+   1.0000
+f(x):
+  -3.4442e-11
+  -1.7497e-11
+
+
+Number of function calls saved for analytic method: 452
+
