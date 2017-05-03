@@ -10,10 +10,10 @@ Solution x:
    1.1667e+01
    8.5711e-06
 f(x):
-  -3.7340e-11
-   3.2419e-14
+  -6.2511e-11
+   3.5527e-15
 
-Number of function calls: 1485
+Number of function calls: 1478
 
 Minimum of Rosenbrock's valley function
 Initial vector x0:
@@ -27,10 +27,10 @@ Solution x:
   -1.0000
    1.0000
 f(x):
-  -3.3815e-10
-  -6.5414e-11
+  -7.9509e-10
+  -1.3252e-10
 
-Number of function calls: 3431
+Number of function calls: 3521
 
 Minimum of Himmelblau's function
 Initial vector x0:
@@ -44,8 +44,8 @@ Solution x:
    3.0000
    2.0000
 f(x):
-   5.5422e-13
-  -7.1054e-14
+   9.1902e-11
+  -3.2049e-11
 
 Number of function calls: 27
 

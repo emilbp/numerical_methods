@@ -8,8 +8,9 @@ vec newton(function<vec(vec)> f, vec x0, vec dx, double eps);
 
 int main() {
 	int ncalls = 0;
-	vec x(2); x[0]=2; x[1]=1;
-	vec dx(2); dx[0]=1e-6; dx[1] = 1e-6;
+	vec x(2);
+	vec dx(2); dx[0]=1e-4; dx[1] = 1e-4;
+	double tol = 1e-8;
 
 	function<vec(vec)> fA1 = [&ncalls] (vec p) {
 		ncalls++;
@@ -33,26 +34,24 @@ int main() {
 		return z;
 	};
 
+	x[0]=2; x[1]=1;
 	cout << "Solve the system: Axy=1; exp(-x) + exp(-y) = 1 + 1/A; A=10000" << endl;
 	x.print("Initial vector x0:");
 	fA1(x).print("f(x0):");
-
 	ncalls = 0;
-	vec b = newton(fA1, x, dx, 1e-6);
+	vec b = newton(fA1, x, dx, tol);
 	int ncalls_final = ncalls;
-
 	b.print("\nSolution x:");
 	fA1(b).print("f(x):");
 	cout << endl << "Number of function calls: " << ncalls_final << endl << endl;
 
-	x[0]=2; x[1]=1;
-	dx[0]=1e-6; dx[1] = 1e-6;
 
+	x[0]=2; x[1]=1;
 	cout << "Minimum of Rosenbrock's valley function" << endl;
 	x.print("Initial vector x0:");
 	fA2(x).print("f(x0):");
 	ncalls = 0;
-	b = newton(fA2, x, dx, 1e-6);
+	b = newton(fA2, x, dx, tol);
 	ncalls_final = ncalls;
 	b.print("\nSolution x:");
 	fA2(b).print("f(x):");
@@ -60,12 +59,11 @@ int main() {
 
 
 	x[0]=2; x[1]=1;
-	dx[0]=1e-6; dx[1] = 1e-6;
 	cout << "Minimum of Himmelblau's function" << endl;
 	x.print("Initial vector x0:");
 	fA3(x).print("f(x0):");
 	ncalls = 0;
-	b = newton(fA3, x, dx, 1e-6);
+	b = newton(fA3, x, dx, tol);
 	ncalls_final = ncalls;
 	b.print("\nSolution x:");
 	fA3(b).print("f(x):");
