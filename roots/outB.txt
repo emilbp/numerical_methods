@@ -1,32 +1,67 @@
-Minimum of Rosenbrock's valley function (numeric)
+### Root of Rosenbrock's valley function
+Numerically calculated Jacobian
 Initial vector x0:
-   2.0000
-   1.0000
+   5.0000
+   6.0000
 f(x0):
-   2.4060e+03
-  -6.0000e+02
+   3.8012e+04
+  -3.8000e+03
 
 Solution x:
   -1.0000
    1.0000
 f(x):
-  -7.9509e-10
-  -1.3252e-10
+  -7.9928e-10
+  -1.3323e-10
 
-Minimum of Rosenbrock's valley function (analytic jacobian)
+Analytic Jacobian
 Initial vector x0:
-   2.0000
-   1.0000
+   5.0000
+   6.0000
 f(x) is
-   2.4060e+03
-  -6.0000e+02
+   3.8012e+04
+  -3.8000e+03
 Solution x using analytic jacobian:
   -1.0000
    1.0000
 f(x):
-  -3.4442e-11
-  -1.7497e-11
+  -3.5795e-11
+  -1.8185e-11
+
+Number of function calls saved for analytic method: 673
 
 
-Number of function calls saved for analytic method: 452
+
+
+### Root of Himmelblau's function
+Numerically calculated Jacobian
+Initial vector x0:
+   5.0000
+   6.0000
+f(x0):
+   3.8012e+04
+  -3.8000e+03
+
+Solution x:
+   3.0000
+   2.0000
+f(x):
+   8.4080e+03
+  -1.4000e+03
+
+Analytic Jacobian
+Initial vector x0:
+   5.0000
+   6.0000
+f(x) is
+   3.8012e+04
+  -3.8000e+03
+Solution x using analytic jacobian:
+   3.0000
+   2.0000
+f(x):
+   8.4080e+03
+  -1.4000e+03
+
+Number of function calls saved for analytic method: 11
 
