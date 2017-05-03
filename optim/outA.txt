@@ -1,0 +1,21 @@
+### Minimum of Rosenbrock's valley function
+x0 = 
+   3.0000
+   5.0000
+f(x0) = 1604
+Minimum found at = 
+   1.0000
+   1.0000
+f(1, 1) = 1.44697e-24
+Minimum found in 20 steps
+
+### Minimum of Himmelblau's function
+x0 = 
+   3.0000
+   5.0000
+f(x0) = 450
+Minimum found at = 
+   3.0000
+   2.0000
+f(3, 2) = 2.32872e-27
+Minimum found in 7 steps
