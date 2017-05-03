@@ -1,0 +1,51 @@
+Solve the system: Axy=1; exp(-x) + exp(-y) = 1 + 1/A; A=10000
+Initial vector x0:
+   2.0000
+   1.0000
+f(x0):
+   1.9999e+04
+  -4.9679e-01
+
+Solution x:
+   1.1667e+01
+   8.5711e-06
+f(x):
+  -3.7340e-11
+   3.2419e-14
+
+Number of function calls: 1485
+
+Minimum of Rosenbrock's valley function
+Initial vector x0:
+   2.0000
+   1.0000
+f(x0):
+   2.4060e+03
+  -6.0000e+02
+
+Solution x:
+  -1.0000
+   1.0000
+f(x):
+  -3.3815e-10
+  -6.5414e-11
+
+Number of function calls: 3431
+
+Minimum of Himmelblau's function
+Initial vector x0:
+   2.0000
+   1.0000
+f(x0):
+  -56.0000
+  -28.0000
+
+Solution x:
+   3.0000
+   2.0000
+f(x):
+   5.5422e-13
+  -7.1054e-14
+
+Number of function calls: 27
+
