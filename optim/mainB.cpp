@@ -8,7 +8,7 @@ int quasi_newton(function<double(vec)> f, vec& x0, double eps);
 
 int main() {
 	int ncalls = 0;
-	vec x(2); x[0] = 0; x[1] = 0;
+	vec x(2); x[0] = -4; x[1] = -4;
 	vec dx(2); dx[0]=1e-4; dx[1] = 1e-4;
 	double tol = 1e-8;
 
@@ -34,7 +34,7 @@ int main() {
 	cout << "Minimum found in " << steps << " steps" << endl << endl;
 
 
-	x[0] = 4; x[1] = 4;
+	x[0] = -4; x[1] = -4;
 	cout << "### Minimum of Himmelblau's function" << endl;
 	x.print("x0 = ");
 	cout << "f(x0) = " << fH(x) << endl;

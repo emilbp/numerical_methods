@@ -1,22 +1,22 @@
 ### Minimum of Rosenbrock's valley function
 x0 = 
-        0
-        0
-f(x0) = 1
+  -4.0000
+  -4.0000
+f(x0) = 40025
 Minimum found at = 
    0.9997
    0.9994
 f(0.9997, 0.999399) = 9.02352e-08
-Minimum found in 1300 steps
+Minimum found in 101809 steps
 
 ### Minimum of Himmelblau's function
 x0 = 
-   4.0000
-   4.0000
-f(x0) = 250
+  -4.0000
+  -4.0000
+f(x0) = 26
 Minimum found at = 
   -3.7793
   -3.2832
-f(-3.77931, -3.28319) = 3.53769e-11
-Minimum found in 13 steps
+f(-3.77931, -3.28319) = 3.53762e-11
+Minimum found in 11 steps
 
