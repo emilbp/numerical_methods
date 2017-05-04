@@ -31,7 +31,7 @@ int newton_mini(function<double(vec)> f, function<vec(vec)> g, function<mat(vec)
 	dfdx = g(x);
 	H = hes(x);
 	steps++;
-	}while(norm(dfdx,2) > eps); // Converges when the gradient is zero
+	}while(norm(dfdx) > eps); // Converges when the gradient is zero
 
 return steps;
 }

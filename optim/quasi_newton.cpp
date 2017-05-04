@@ -44,7 +44,7 @@ int quasi_newton(function<double(vec)> f, vec& x, double eps) {
 	fx = f(x);
 	dfdx = dfdx_n;
 	steps++;
-	}while(norm(dfdx,2) > eps); // Converges when the gradient is zero
+	}while(norm(dfdx) > eps); // Converges when the gradient is zero
 
 return steps;
 }

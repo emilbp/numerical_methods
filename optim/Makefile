@@ -8,7 +8,6 @@ outA.txt: mainA
 
 outB.txt: mainB
 	./mainB > outB.txt
-	cat outB.txt
 
 mainA: mainA.o newton_mini.o ../lineq/qr_gs_dec.o ../lineq/qr_gs_solve.o
 	g++ -std=c++11 mainA.o newton_mini.o ../lineq/qr_gs_dec.o ../lineq/qr_gs_solve.o -o mainA -larmadillo
