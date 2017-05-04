@@ -4,10 +4,10 @@ x0 =
         0
 f(x0) = 1
 Minimum found at = 
-   1.0000
-   1.0000
-f(1, 1) = 1.00951e-15
-Minimum found in 13 steps
+   0.9997
+   0.9994
+f(0.9997, 0.999399) = 9.02349e-08
+Minimum found in 1297 steps
 
 ### Minimum of Himmelblau's function
 x0 = 
@@ -15,7 +15,8 @@ x0 =
         0
 f(x0) = 170
 Minimum found at = 
-  -0.2708
-  -0.9230
-f(-0.270845, -0.923039) = 181.617
-Minimum found in 1016 steps
+   3.0000
+   2.0000
+f(3, 2) = 1.01084e-11
+Minimum found in 13 steps
+
