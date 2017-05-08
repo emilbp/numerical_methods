@@ -1,0 +1,13 @@
+set term png
+set out "plot.png"
+set termopt enhanced
+set title "d/dt (y_1, y_2) = (y_2, -y_1)" 
+set xlabel "t"
+set ylabel "y_1, y_2"
+
+plot 'outA.txt' i 0 u 1:2 w points title columnheader(1),\
+     'outA.txt' i 0 u 1:3 w points title columnheader(2),\
+     'outA.txt' i 1 u 1:2 w points title columnheader(1),\
+     'outA.txt' i 1 u 1:3 w points title columnheader(2),\
+     'outA.txt' i 2 u 1:2 w points title columnheader(1),\
+     'outA.txt' i 2 u 1:3 w points title columnheader(2)

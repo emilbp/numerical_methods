@@ -1,11 +1,13 @@
 .PHONY: default
 default: A
 
-A: outA.txt
+A: plot.png
+
+plot.png: plot.gpi outA.txt Makefile
+	gnuplot $<
 
 outA.txt: mainA
 	./mainA > outA.txt
-	cat outA.txt
 
 mainA: mainA.o ode.o
 	g++ -std=c++11 mainA.o ode.o -o mainA -larmadillo
@@ -19,4 +21,4 @@ ode.o: ode.cpp
 .PHONY: clean
 
 clean:
-	rm -f *.o out* mainA
+	rm -f *.o out* *.png mainA
