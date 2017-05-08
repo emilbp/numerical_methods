@@ -111,12 +111,12 @@ void rkdriver(
 
 		double tol = (acc + norm(y1,2)*eps)*sqrt(h/(b-a));
 
-		if (tol > err) {
+		if (err < tol) {
 			xlist.push_back(x+h);
 			ylist.push_back(y1);
 		}
 		if (err > 0) {
-			h = h*pow(tol/err,0.25)*0.95;
-		} else {h = 2*h;}
+			h *= pow(tol/err,0.25)*0.95; // Reduce the step size
+		} else {h *= 2;} // If the error is very low, increase the step size
 	}
 }
