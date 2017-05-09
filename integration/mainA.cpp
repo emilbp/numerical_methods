@@ -25,13 +25,66 @@ int ncalls = 0;
 	};
 
 	double a = 0, b = 1, acc = 1e-5, eps = 1e-5;
-	int p = 1;
+	int nc, no;
+	string func;
 
-	double Q1 = adapt_open(f, p, a, b, eps, acc);
-	double Q2 = adapt_closed(f, p, a, b, eps, acc);
+	cout << "### Open adaptive integration" << endl;
+	cout << "eps = " << eps << ", acc = " << acc << endl << endl;
+	for (int i = 1; i < 5; i++) {
+	double ans;
+	switch(i) {
+		case 1:
+			func = "sqrt(x)"; ans = 2.0/3.0;
+			break;
+		case 2:
+			func = "1/sqrt(x)"; ans = 2;
+			break;
+		case 3:
+			func = "ln(x)/sqrt(x)"; ans = -4;
+			break;
+		case 4:
+			func = "4*sqrt(1 - (1-x)^2)"; ans = 4*atan(1.0);
+			break;
+	}
+	ncalls = 0;
+	double Qo = adapt_open(f, i, a, b, eps, acc);
+	no = ncalls; ncalls = 0;
+	cout << "Integrating\t" << func << endl;
+	cout << "Exact answer:\t" << ans << endl;
+	cout << "Integral:\t" << Qo << endl;
+	cout << "Number of f calls: " << no << endl;
+	cout << "Est. error:\t" << acc + abs(Qo)*eps << endl;
+	cout << "Actual error:\t" << abs(Qo - ans) << endl << endl;
+	}
 
-	cout << "Q is: " << Q1 << endl;
-	cout << "Q is: " << Q2 << endl;
-	cout << "Number of f calls: " << ncalls << endl;
+	cout << endl << "### Closed adaptive integration" << endl;
+	cout << "eps = " << eps << ", acc = " << acc << endl << endl;
+	for (int i = 1; i < 5; i++) {
+	double ans;
+	switch(i) {
+		case 1:
+			func = "sqrt(x)"; ans = 2.0/3.0;
+			break;
+		case 2:
+			func = "1/sqrt(x)"; ans = 2;
+			break;
+		case 3:
+			func = "ln(x)/sqrt(x)"; ans = -4;
+			break;
+		case 4:
+			func = "4*sqrt(1 - (1-x)^2)"; ans = 4*atan(1.0);
+			break;
+	}
+	ncalls = 0;
+	double Qc = adapt_closed(f, i, a, b, eps, acc);
+	no = ncalls; ncalls = 0;
+	cout << "Integrating\t" << func << endl;
+	cout << "Exact answer:\t" << ans << endl;
+	cout << "Integral:\t" << Qc << endl;
+	cout << "Number of f calls: " << no << endl;
+	cout << "Est. error:\t" << acc + abs(Qc)*eps << endl;
+	cout << "Actual error:\t" << abs(Qc - ans) << endl << endl;
+	}
+
 return 0;
 }
