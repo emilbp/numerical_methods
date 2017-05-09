@@ -35,56 +35,48 @@ tuple<vec, double> rkstep23(function<vec(double,vec)> F, double t, vec y, double
 		yt[i] = y[i] + k2[i] * h * 3/4;
 	}
 	vec k3 = F(t + 3/4 * h, yt);
+	vec y1(n);
 	for (int i = 0; i < n; i++) {
-		yh[i] = y[i] + ( 2/9 * k1[i] + 1/3 * k2[i] + 4/9 * k3[i]) * h;
+		y1[i] = y[i] + ( 2/9 * k1[i] + 1/3 * k2[i] + 4/9 * k3[i]) * h;
 	}
 
-	vec k4 = F(t + h, yh);
+	vec k4 = F(t + h, y1);
+	vec y2(n);
 	for (int i = 0; i < n; i++) {
-		yt[i] = y[i] + (7/24 * k1[i] + 1/4 * k2[i] + 1/3 * k3[i] + 1/8 * k4[i]) * h;
-		err[i] = yh[i] - yt[i];
+		y2[i] = y[i] + (7/24 * k1[i] + 1/4 * k2[i] + 1/3 * k3[i] + 1/8 * k4[i]) * h;
+		err[i] = y2[i] - y1[i];
 	}
 
-return make_tuple(yh, norm(err,2));
+return make_tuple(y2, norm(err,2));
 
 }
 
 tuple<vec, double> rkstep45(function<vec(double,vec)> F, double t, vec y, double h) {
 	int n = y.size();
-	vec yt = zeros(n), ye = zeros(n), err = zeros(n);
-	vec k1 = F(t,y);
-	for (int i = 0; i < n; i++) {
-		yt[i] = y[i] + 1/4 * k1[i] * h;
-	}
+	vec yh(n), err(n), k1(n), k2(n), k3(n), k4(n), k5(n), k6(n), yl(n);
 
-	vec k2 = F(t + h/4, yt);
-	for (int i = 0; i < n; i++) {
-		yt[i] = y[i] + (3/32 * k1[i] + 9/32 * k2[i]) * h;
-	}
+	k1 = F(t,y);
+	yh = y + h*k1/4;
 
-	vec k3 = F(t + 3/8 * h, yt);
-	for (int i = 0; i < n; i++) {
-		yt[i] = y[i] + (1932/2197 * k1[i] -7200*2197 * k2[i] + 7296/2197 * k3[i]) * h;
-	}
+	k2 = F(t + h/4, yh);
+	yh = y + h*(3*k1/32 + 9*k2/32);
 
-	vec k4 = F(t + 12/13 * h, yt);
-	for (int i = 0; i < n; i++) {
-		yt[i] = y[i] + (439/213 * k1[i] -8 * k2[i] + 3680/513 * k3[i] - 845/4104 * k4[i]) * h;
-	}
+	k3 = F(t + 3*h/8, yh);
+	yh = y + h*(1932*k1/2197 - 7200*k2/2197 + 7296*k3/2197);
 
-	vec k5 = F(t + h, yt);
-	for (int i = 0; i < n; i++) {
-		yt[i] = y[i] + (-8/27 * k1[i] + 2 * k2[i] - 3544/2565 * k3[i] + 1859/4104 * k4[i] - 11/40 * k5[i]) * h;
-	}
+	k4 = F(t + 12*h/13, yh);
+	yh = y + h*(439*k1/216 - 8*k2 + 3680*k3/513 - 845*k4/4104);
 
-	vec k6 = F(t + h/2, yt);
+	k5 = F(t + h, yh);
+	yh = y + h*(-8*k1/27 + 2*k2 -3544*k3/2565  + 1859*k4/4104 - 11*k5/40);
 
-	for (int i = 0; i < n; i++) {
-		ye[i] = y[i] + (16/135 * k1[i] + 6656/12825 * k3[i] + 28561/56430 * k4[i] - 9/50 * k5[i] + 2/55 * k6[i]) * h;
-		yt[i] = y[i] + (25/216 * k1[i] - 1408/2565 * k3[i] + 2197/4104 * k4[i] - 1/5 * k5[i]) * h;
-		err[i] = ye[i] - yt[i];
-	}
-return make_tuple(ye, norm(err,2));
+	k6 = F(t + h/2, yh);
+
+	yh = y + h*(16*k1/135 + 6656*k3/12825 + 28561*k4/56430 - 9*k5/50 +2*k6/55);
+	yl = y + h*(25*k1/216 + 1408*k3/2565  + 2197 *k4/4104  -   k5/5);
+	err = yh-yl;
+
+return make_tuple(yh, norm(err,2));
 }
 
 
