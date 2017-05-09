@@ -8,10 +8,11 @@ tuple<vec, double> rkstep12(function<vec(double,vec)> F, double t, vec y, double
 
 	vec yt = zeros(n), yh = zeros(n), err = zeros(n);
 	vec k0 = F(t,y);
+	k0.print("k0 is");
 	for (int i = 0; i < n; i++) {
 		yt[i] = y[i] + k0[i] * h/2;
 	}
-
+	yt.print("yt is");
 	vec k12 = F(t + h/2, yt);
 	for (int i = 0; i < n; i++) {
 		yh[i] = y[i] + k12[i] * h;
@@ -21,34 +22,36 @@ tuple<vec, double> rkstep12(function<vec(double,vec)> F, double t, vec y, double
 		err[i] = (k0[i] - k12[i]) * h/2;
 	}
 
-return make_tuple(yh, norm(err));
+return make_tuple(yh, norm(err,2));
 }
 
-tuple<vec, double> rkstep32(function<vec(double,vec)> F, double t, vec y, double h) {
+tuple<vec, double> rkstep23(function<vec(double,vec)> F, double t, vec y, double h) {
 	int n = y.size();
-	vec yt = zeros(n), ye = zeros(n), err = zeros(n);
-	vec k1(n), k2(n), k3(n), k4(n);
-	k1 = F(t,y);
+	vec yt = zeros(n), yh = zeros(n), err = zeros(n);
+
+	vec k1 = F(t,y);
+	k1.print("k1 is");
 	for (int i = 0; i < n; i++) {
-		yt[i] = y[i] + (1/2) * k1[i] * h;
+		yt[i] = y[i] + k1[i] * h/2;
 	}
-	k2 = F(t + h/2, yt);
+	yt.print("yt is");
+	vec k2 = F(t + h/2, yt);
 	for (int i = 0; i < n; i++) {
-		yt[i] = y[i] + (3/4) * k2[i] * h;
+		yt[i] = y[i] + k2[i] * h * 3/4;
+	}
+	vec k3 = F(t + 3/4 * h, yt);
+	for (int i = 0; i < n; i++) {
+		yh[i] = y[i] + ( 2/9 * k1[i] + 1/3 * k2[i] + 4/9 * k3[i]) * h;
+	}
+	vec k4 = F(t + h, yh);
+	for (int i = 0; i < n; i++) {
+		yt[i] = y[i] + (7/24 * k1[i] + 1/4 * k2[i] + 1/3 * k3[i] + 1/8 * k4[i]) * h;
+	}
+	for (int i = 0; i < n; i++) {
+		err[i] = yh[i] - yt[i];
 	}
 
-	k3 = F(t + 3/4 * h, yt);
-	for (int i = 0; i < n; i++) {
-		ye[i] = y[i] + ((2/9) * k1[i] + (1/3) * k2[i] + (4/9) * k3[i]) * h;
-	}
-
-	k4 = F(t + h, yt);
-	for (int i = 0; i < n; i++) {
-		yt[i] = y[i] + ((7/24) * k1[i] + (1/4) * k2[i] + (1/3) * k3[i] + (1/8) * k4[i]) * h;
-		err[i] = ye[i] - yt[i];
-	}
-
-return make_tuple(ye, norm(err));
+return make_tuple(yh, norm(err,2));
 }
 
 tuple<vec, double> rkstep45(function<vec(double,vec)> F, double t, vec y, double h) {
@@ -86,7 +89,7 @@ tuple<vec, double> rkstep45(function<vec(double,vec)> F, double t, vec y, double
 		yt[i] = y[i] + (25/216 * k1[i] - 1408/2565 * k3[i] + 2197/4104 * k4[i] - 1/5 * k5[i]) * h;
 		err[i] = ye[i] - yt[i];
 	}
-return make_tuple(ye, norm(err));
+return make_tuple(ye, norm(err,2));
 }
 
 
@@ -98,25 +101,28 @@ void rkdriver(
 
 	int n = ylist.front().size();
 	double a = xlist.front();
-	vec y1(n); double err;
 
 	while(xlist.back() < b) {
+		vec y1(n); double err;
 		double x = xlist.back();
 		vec y = ylist.back();
 		if (x+h > b) h = b-x;
-		if (mode == "ode12") {tie(y1, err) = rkstep12(F, x, y, h);}
-		else if (mode == "ode32") {tie(y1, err) = rkstep32(F, x, y, h);}
-		else if (mode == "ode45") {tie(y1, err) = rkstep45(F, x, y, h);}
-		else {throw invalid_argument("Stepper mode not recognized");}
+		if (mode == "ode12") {
+			tie(y1, err) = rkstep12(F, x, y, h);
+		} else if (mode == "ode23") {
+			tie(y1, err) = rkstep23(F, x, y, h);
+		} else if (mode == "ode45") {
+			tie(y1, err) = rkstep45(F, x, y, h);
+		} else {throw invalid_argument("Stepper mode not recognized");}
 
 		double tol = (acc + norm(y1,2)*eps)*sqrt(h/(b-a));
 
-		if (err < tol) {
+		if (tol > err) {
 			xlist.push_back(x+h);
 			ylist.push_back(y1);
 		}
 		if (err > 0) {
-			h *= pow(tol/err,0.25)*0.95; // Reduce the step size
-		} else {h *= 2;} // If the error is very low, increase the step size
+			h = h*pow(tol/err,0.25)*0.95; // Reduce the step size
+		} else {h = 2*h;} // If the error is very low, increase the step size
 	}
 }
