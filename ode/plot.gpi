@@ -2,6 +2,7 @@ set term png
 set out "plot.png"
 set termopt enhanced
 set ylabel "y_1, y_2"
+set key box
 
 set multiplot layout 3,1 title "Solving d/dt (y1, y2) = (-y2, y1) using different steppers"
 plot 'outA.txt' i 0 u 1:2 w points title columnheader(1),\
