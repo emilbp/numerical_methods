@@ -92,28 +92,28 @@ void rkdriver(
 	function<vec(double,vec)> & F,
 	vector<double> & xlist, vector<vec> & ylist,
 	string mode,
-	double b, double h, double acc, double eps) {
+	const double b, double h, const double acc, const double eps) {
 
 	int n = ylist.front().size();
 	double a = xlist.front();
+	vec y1(n); double err;
 
 	while(xlist.back() < b) {
-		vec y1(n); double err;
-		double x = xlist.back();
-		vec y = ylist.back();
-		if (x+h > b) h = b-x;
+		double x0 = xlist.back();
+		vec y0 = ylist.back();
+		if (x0+h > b) { h = b-x0; }
 		if (mode == "ode12") {
-			tie(y1, err) = rkstep12(F, x, y, h);
+			tie(y1, err) = rkstep12(F, x0, y0, h);
 		} else if (mode == "ode23") {
-			tie(y1, err) = rkstep23(F, x, y, h);
+			tie(y1, err) = rkstep23(F, x0, y0, h);
 		} else if (mode == "ode45") {
-			tie(y1, err) = rkstep45(F, x, y, h);
+			tie(y1, err) = rkstep45(F, x0, y0, h);
 		} else {throw invalid_argument("Stepper mode not recognized");}
 
 		double tol = (acc + norm(y1,2)*eps)*sqrt(h/(b-a));
 
 		if (tol > err) {
-			xlist.push_back(x+h);
+			xlist.push_back(x0+h);
 			ylist.push_back(y1);
 		}
 		if (err > 0) {
