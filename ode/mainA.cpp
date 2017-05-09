@@ -25,13 +25,13 @@ int main() {
 
 
 	xlist[0] = a; ylist[0] = vec({0,10});
-	rkdriver(f1, xlist, ylist, "ode23", b, h, acc, eps);
+	rkdriver(f1, xlist, ylist, "ode12", b, h, acc, eps);
 
 	cout << "\"ode12: y1\" \"ode12: y2\"" << endl;
 	for(int i=0;i<xlist.size();i++) {
 		cout << xlist[i] << " " << ylist[i][0] << " " << ylist[i][1] << endl;
 	}
-/*
+
 	a = 0, b = 3, h = 0.1, acc = 0.01, eps = 0.01;
 	xlist2[0] = a; ylist2[0] = vec({0,10});
 	rkdriver(f1, xlist2, ylist2, "ode23", b, h, acc, eps);
@@ -49,7 +49,7 @@ int main() {
 	for(int i=0;i<xlist3.size();i++) {
 		cout << xlist3[i] << " " << ylist3[i][0] << " " << ylist3[i][1] << endl;
 	}
-*/
+
 
 return 0;
 }

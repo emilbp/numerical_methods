@@ -5,14 +5,11 @@ using namespace arma;
 
 tuple<vec, double> rkstep12(function<vec(double,vec)> F, double t, vec y, double h) {
 	int n = y.size();
-
 	vec yt = zeros(n), yh = zeros(n), err = zeros(n);
 	vec k0 = F(t,y);
-	k0.print("k0 is");
 	for (int i = 0; i < n; i++) {
 		yt[i] = y[i] + k0[i] * h/2;
 	}
-	yt.print("yt is");
 	vec k12 = F(t + h/2, yt);
 	for (int i = 0; i < n; i++) {
 		yh[i] = y[i] + k12[i] * h;
@@ -30,12 +27,10 @@ tuple<vec, double> rkstep23(function<vec(double,vec)> F, double t, vec y, double
 	vec yt = zeros(n), yh = zeros(n), err = zeros(n);
 
 	vec k1 = F(t,y);
-	k1.print("k1 is");
 	for (int i = 0; i < n; i++) {
 		yt[i] = y[i] + k1[i] * h/2;
 	}
-	yt.print("yt is");
-	vec k2 = F(t + h/2, yt);
+	vec k2 = F(t+h/2, yt);
 	for (int i = 0; i < n; i++) {
 		yt[i] = y[i] + k2[i] * h * 3/4;
 	}
@@ -43,15 +38,15 @@ tuple<vec, double> rkstep23(function<vec(double,vec)> F, double t, vec y, double
 	for (int i = 0; i < n; i++) {
 		yh[i] = y[i] + ( 2/9 * k1[i] + 1/3 * k2[i] + 4/9 * k3[i]) * h;
 	}
+
 	vec k4 = F(t + h, yh);
 	for (int i = 0; i < n; i++) {
 		yt[i] = y[i] + (7/24 * k1[i] + 1/4 * k2[i] + 1/3 * k3[i] + 1/8 * k4[i]) * h;
-	}
-	for (int i = 0; i < n; i++) {
 		err[i] = yh[i] - yt[i];
 	}
 
 return make_tuple(yh, norm(err,2));
+
 }
 
 tuple<vec, double> rkstep45(function<vec(double,vec)> F, double t, vec y, double h) {
