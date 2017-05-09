@@ -6,14 +6,14 @@ A: plot.png
 plot.png: plot.gpi outA.txt Makefile
 	gnuplot $<
 
-outA.txt: mainA
-	./mainA > outA.txt
+outA.txt: mainAB
+	./mainAB > outA.txt
 
-mainA: mainA.o ode.o
-	g++ -std=c++11 mainA.o ode.o -o mainA -larmadillo
+mainAB: mainAB.o ode.o
+	g++ -std=c++11 mainAB.o ode.o -o mainAB -larmadillo
 
-mainA.o: mainA.cpp
-	g++ -std=c++11 mainA.cpp -c -larmadillo
+mainAB.o: mainAB.cpp
+	g++ -std=c++11 mainAB.cpp -c -larmadillo
 
 ode.o: ode.cpp
 	g++ -std=c++11 ode.cpp -c -larmadillo
@@ -21,4 +21,4 @@ ode.o: ode.cpp
 .PHONY: clean
 
 clean:
-	rm -f *.o out* *.png mainA
+	rm -f *.o out* *.png mainAB
