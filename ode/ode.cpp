@@ -24,36 +24,28 @@ return make_tuple(yh, norm(err,2));
 
 tuple<vec, double> rkstep23(function<vec(double,vec)> F, double t, vec y, double h) {
 	int n = y.size();
-	vec yt = zeros(n), yh = zeros(n), err = zeros(n);
+	vec yh(n), err(n), k1(n), k2(n), k3(n), k4(n), y1(n);
 
-	vec k1 = F(t,y);
-	for (int i = 0; i < n; i++) {
-		yt[i] = y[i] + k1[i] * h/2;
-	}
-	vec k2 = F(t+h/2, yt);
-	for (int i = 0; i < n; i++) {
-		yt[i] = y[i] + k2[i] * h * 3/4;
-	}
-	vec k3 = F(t + 3/4 * h, yt);
-	vec y1(n);
-	for (int i = 0; i < n; i++) {
-		y1[i] = y[i] + ( 2/9 * k1[i] + 1/3 * k2[i] + 4/9 * k3[i]) * h;
-	}
+	k1 = F(t,y);
+	yh = y + h*k1/2;
 
-	vec k4 = F(t + h, y1);
-	vec y2(n);
-	for (int i = 0; i < n; i++) {
-		y2[i] = y[i] + (7/24 * k1[i] + 1/4 * k2[i] + 1/3 * k3[i] + 1/8 * k4[i]) * h;
-		err[i] = y2[i] - y1[i];
-	}
+	k2 = F(t + h/2, yh);
+	yh = y + h*3*k2/4;
 
-return make_tuple(y2, norm(err,2));
+	k3 = F(t + 3*h/4, yh);
+	yh = y + h*(2*k1/9 + k2/3 + 4*k3/9);
 
+	k4 = F(t + h, yh);
+	yh = y + h*(2*k1/9 + k2/3 + 4*k3/9);
+	y1 = y + h*(7*k1/24 + k2/4 + k3/4 + k4/8);
+	err = yh - y1;
+
+return make_tuple(yh, norm(err,2));
 }
 
 tuple<vec, double> rkstep45(function<vec(double,vec)> F, double t, vec y, double h) {
 	int n = y.size();
-	vec yh(n), err(n), k1(n), k2(n), k3(n), k4(n), k5(n), k6(n), yl(n);
+	vec yh(n), err(n), k1(n), k2(n), k3(n), k4(n), k5(n), k6(n), y1(n);
 
 	k1 = F(t,y);
 	yh = y + h*k1/4;
@@ -73,8 +65,8 @@ tuple<vec, double> rkstep45(function<vec(double,vec)> F, double t, vec y, double
 	k6 = F(t + h/2, yh);
 
 	yh = y + h*(16*k1/135 + 6656*k3/12825 + 28561*k4/56430 - 9*k5/50 +2*k6/55);
-	yl = y + h*(25*k1/216 + 1408*k3/2565  + 2197 *k4/4104  -   k5/5);
-	err = yh-yl;
+	y1 = y + h*(25*k1/216 + 1408*k3/2565  + 2197 *k4/4104  -   k5/5);
+	err = yh-y1;
 
 return make_tuple(yh, norm(err,2));
 }
