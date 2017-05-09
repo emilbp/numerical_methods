@@ -1,3 +1,3 @@
-f(0.5) is: 3.4641
-Q is: 3.14159
-Number of f calls: 161
+Q is: 0.666668
+Q is: 0.66665
+Number of f calls: 197
