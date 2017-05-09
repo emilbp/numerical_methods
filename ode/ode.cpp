@@ -5,19 +5,14 @@ using namespace arma;
 
 tuple<vec, double> rkstep12(function<vec(double,vec)> F, double t, vec y, double h) {
 	int n = y.size();
-	vec yt = zeros(n), yh = zeros(n), err = zeros(n);
-	vec k0 = F(t,y);
-	for (int i = 0; i < n; i++) {
-		yt[i] = y[i] + k0[i] * h/2;
-	}
-	vec k12 = F(t + h/2, yt);
-	for (int i = 0; i < n; i++) {
-		yh[i] = y[i] + k12[i] * h;
-	}
+	vec yt(n), yh(n), err(n), k0(n), k12(n);
 
-	for (int i = 0; i < n; i++) {
-		err[i] = (k0[i] - k12[i]) * h/2;
-	}
+	k0 = F(t,y);
+	yt = y + k0*h/2;
+
+	k12 = F(t + h/2, yt);
+	yh = y + k12*h;
+	err = (k0 - k12) * h/2;
 
 return make_tuple(yh, norm(err,2));
 }
@@ -36,8 +31,7 @@ tuple<vec, double> rkstep23(function<vec(double,vec)> F, double t, vec y, double
 	yh = y + h*(2*k1/9 + k2/3 + 4*k3/9);
 
 	k4 = F(t + h, yh);
-	yh = y + h*(2*k1/9 + k2/3 + 4*k3/9);
-	y1 = y + h*(7*k1/24 + k2/4 + k3/4 + k4/8);
+	y1 = y + h*(7*k1/24 + k2/4 + k3/3 + k4/8);
 	err = yh - y1;
 
 return make_tuple(yh, norm(err,2));

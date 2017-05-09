@@ -32,7 +32,6 @@ int main() {
 		cout << xlist[i] << " " << ylist[i][0] << " " << ylist[i][1] << endl;
 	}
 
-	a = 0, b = 3, h = 0.1, acc = 0.01, eps = 0.01;
 	xlist2[0] = a; ylist2[0] = vec({0,10});
 	rkdriver(f1, xlist2, ylist2, "ode23", b, h, acc, eps);
 
@@ -41,7 +40,6 @@ int main() {
 		cout << xlist2[i] << " " << ylist2[i][0] << " " << ylist2[i][1] << endl;
 	}
 
-	a = 0, b = 3, h = 0.1, acc = 0.01, eps = 0.01;
 	xlist3[0] = a; ylist3[0] = vec({0,10});
 	rkdriver(f1, xlist3, ylist3, "ode45", b, h, acc, eps);
 
