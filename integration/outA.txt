@@ -1,28 +1,28 @@
 ### Open adaptive integration
 eps = 1e-05, acc = 1e-05
 
-Integrating	sqrt(x)
+Integrating	sqrt(x) from 0 to 1
 Exact answer:	0.666667
 Integral:	0.666668
 Number of f calls: 80
 Est. error:	1.66667e-05
 Actual error:	8.3713e-07
 
-Integrating	1/sqrt(x)
+Integrating	1/sqrt(x) from 0 to 1
 Exact answer:	2
 Integral:	2
 Number of f calls: 34248
 Est. error:	3e-05
 Actual error:	1.67079e-07
 
-Integrating	ln(x)/sqrt(x)
+Integrating	ln(x)/sqrt(x) from 0 to 1
 Exact answer:	-4
 Integral:	-4
 Number of f calls: 68344
 Est. error:	5e-05
 Actual error:	9.06603e-08
 
-Integrating	4*sqrt(1 - (1-x)^2)
+Integrating	4*sqrt(1 - (1-x)^2) from 0 to 1
 Exact answer:	3.14159
 Integral:	3.14159
 Number of f calls: 160
@@ -33,10 +33,10 @@ Actual error:	5.28684e-07
 ### Closed adaptive integration
 eps = 1e-05, acc = 1e-05
 
-Integrating	sqrt(x)
-Exact answer:	0.666667
-Integral:	0.66665
-Number of f calls: 117
-Est. error:	1.66665e-05
-Actual error:	1.68393e-05
+Integrating	 4*sqrt(1 - (1-x)^2) from 0 to 1
+Exact answer:	3.14159
+Integral:	3.14156
+Number of f calls: 241
+Est. error:	4.14156e-05
+Actual error:	3.04742e-05
 

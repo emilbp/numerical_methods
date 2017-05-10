@@ -1,0 +1,24 @@
+### Open adaptive integration
+eps = 1e-05, acc = 1e-05
+
+Integrating	exp(-x * x) from -inf to inf
+Exact answer:	1.77245
+Integral:	1.77242
+Number of f calls: 328
+Est. error:	2.77242e-05
+Actual error:	2.97784e-05
+
+Integrating	1/(x^10 + x) from 1 to inf
+Exact answer:	0.0770164
+Integral:	0.077016
+Number of f calls: 56
+Est. error:	1.07702e-05
+Actual error:	3.68476e-07
+
+Integrating	x*exp(x) from -inf to -1
+Exact answer:	-0.735759
+Integral:	-0.735758
+Number of f calls: 148
+Est. error:	1.73576e-05
+Actual error:	1.13113e-06
+
