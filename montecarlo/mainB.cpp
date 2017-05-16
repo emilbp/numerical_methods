@@ -18,17 +18,17 @@ int main() {
 	vec a = {-1, -1, 0}, b = {1, 1, 1};
 	double ans = M_PI;
 	int N;
-
-	vec Ns(100), As(100), Es(100);
-	for (int i = 0; i < 100; i++) {
-		N = (i+1) * 1000;
+	int nsamples = 200;
+	vec Ns(nsamples), As(nsamples), Es(nsamples);
+	for (int i = 0; i < nsamples; i++) {
+		N = (i+1) * nsamples;
 		double Q, E;
 		tie(Q,E) = mc(f2, a, b, N);
 		As(i) = abs(Q-ans), Es(i) = E, Ns(i) = N;
 	}
 
 	cout << "\"Actual error\" \"Estimated error\" \"Expected behavior O(1/sqrt(N))\"";
-	for (int i = 0; i < 100; i++) {
+	for (int i = 0; i < nsamples; i++) {
 		cout << Ns(i) << " " << As(i) << " " << Es(i) << " " << exp(1)/sqrt(Ns(i)) << endl;
 	}
 return 0;
