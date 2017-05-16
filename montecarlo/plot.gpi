@@ -1,0 +1,6 @@
+set term png
+set out "plotB.png"
+
+plot 'outB.txt' i 0 u 1:2 w points title columnheader(1),\
+     'outB.txt' i 0 u 1:3 w points title columnheader(2),\
+     'outB.txt' i 0 u 1:4 w lines title columnheader(3)
