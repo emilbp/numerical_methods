@@ -25,8 +25,8 @@ main() {
 	function<dcomp(dcomp)> f3 = [] (dcomp z) {
 		return 1./z;
 	};
-	function<dcomp(dcomp)> f4 = [] (dcomp z) {
-		return exp(z);
+	function<dcomp(dcomp)> f4 = [&i] (dcomp z) {
+		return exp(z + i*z);
 	};
 
 	cout << "#####################\n# Numerical methods #\n#  Exam project 20  #\n# Emil T. Bjerglund #\n#####################" << endl;
@@ -53,9 +53,10 @@ main() {
 	cout << "a = " << real(a) << "+" << imag(a) << "i" << ", b = " << real(b) << "+" << imag(b) << "i" << endl;
 	cout << "Integral of f3 from a to b = " << real(res) << " + " << imag(res) << "i" << endl << endl;
 
-	a = 0. + 0.*i, b = 1. + 1.*i;
+	a = 0. + 0.*i, b = pi/2. + 0.*i;
 	res = adapt(f4, a, b, acc, eps);
-	cout << "f4(z) = e^z" << endl;
+	cout << "f4(z) = e^(z + iz)" << endl;
 	cout << "a = " << real(a) << "+" << imag(a) << "i" << ", b = " << real(b) << "+" << imag(b) << "i" << endl;
-	cout << "Integral of f4 from a to b = " << real(res) << " + " << imag(res) << "i" << endl << endl;
+	cout << "Integral of f4 from a to b = " << real(res) << " + " << imag(res) << "i" << endl;
+	cout << "Exact answer = (1/2)*[(e^(pi/2) - 1) + i*(e^(pi/2) + 1)] ~ " << 0.5*(exp(pi/2)-1) << " + " << 0.5*(exp(pi/2)+1) << "i" << endl;
 }

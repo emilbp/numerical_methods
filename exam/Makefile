@@ -5,7 +5,6 @@ A: outA.txt
 
 outA.txt: mainA
 	./mainA > outA.txt
-	cat outA.txt
 
 mainA: mainA.o adapt_complex.o
 	g++ -std=c++11 mainA.o adapt_complex.o -o mainA

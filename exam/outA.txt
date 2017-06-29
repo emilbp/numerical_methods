@@ -18,7 +18,7 @@ f3(z) = 1/z
 a = 1+0i, b = 2+-1i
 Integral of f3 from a to b = 0.804712 + -0.463683i
 
-f4(z) = e^z
-a = 0+0i, b = 1+1i
-Integral of f4 from a to b = 0.467205 + 2.28766i
-
+f4(z) = e^(z + iz)
+a = 0+0i, b = 1.5708+0i
+Integral of f4 from a to b = 1.90241 + 2.90796i
+Exact answer = (1/2)*[(e^(pi/2) - 1) + i*(e^(pi/2) + 1)] ~ 1.90524 + 2.90524i
