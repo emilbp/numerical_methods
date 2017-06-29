@@ -7,10 +7,16 @@
 The solution in this exam project used an adaptive method with closed quadratures. It recursively iterates until the defined tolerance is met. The interface to the integration function `adapt()` is:
 
 ```c++
-complex<double> adapt(f(z), a, b, acc, eps);
+complex<double> adapt(function<complex<double>(complex<double>)> f, 
+                      complex<double> a, 
+                      complex<double> b, 
+                      double acc, 
+                      double eps);
 ```
 which takes a complex-valued function `f(z)`, complex integration limits `a` and `b` and absolute and relative accuracies `acc` and `eps`. It returns the complex result of the integration.
 
-To demonstrate that the function works, four different functions are evalutate with varying limits:
+To demonstrate that the function works, four different functions are evalutated with different limits:
 
 ![Integrals evaluated](integrals.png)
+
+The results can be found in [outA.txt](outA.txt).
