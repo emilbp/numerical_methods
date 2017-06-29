@@ -1,1 +1,24 @@
-Res is: (-0.666687,0.666687)
+#####################
+# Numerical methods #
+#  Exam project 20  #
+# Emil T. Bjerglund #
+#####################
+
+Adaptive integration of complex functions
+
+f1(z) = z
+a = 1+1i, b = 3+3i
+Integral of f1 from a to b = 0 + 8i
+
+f2(z) = z^2
+a = 0+0i, b = 1+1i
+Integral of f2 from a to b = -0.666687 + 0.666687i
+
+f3(z) = 1/z
+a = 1+0i, b = 2+-1i
+Integral of f3 from a to b = 0.804712 + -0.463683i
+
+f4(z) = e^z
+a = 0+0i, b = 1+1i
+Integral of f4 from a to b = 0.467205 + 2.28766i
+
