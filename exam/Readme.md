@@ -11,4 +11,6 @@ complex<double> adapt(f(z), a, b, acc, eps);
 ```
 which takes a complex-valued function `f(z)`, complex integration limits `a` and `b` and absolute and relative accuracies `acc` and `eps`. It returns the complex result of the integration.
 
+To demonstrate that the function works, four different functions are evalutate with varying limits:
 
+![Integrals evaluated](integrals.png)
