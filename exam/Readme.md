@@ -17,6 +17,6 @@ which takes a complex-valued function `f(z)`, complex integration limits `a` and
 
 To demonstrate that the function works, four different functions are evalutated with different limits:
 
-![Integrals evaluated](integrals.png)
+![Integrals evaluated](int.png)
 
 The results can be found in [outA.txt](outA.txt).
